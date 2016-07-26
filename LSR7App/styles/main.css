@@ -351,5 +351,5 @@
     margin: 0;
 }
 
-.km-flat .km-button 
+.km-widget.km-button.km-back {color:#fff}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
