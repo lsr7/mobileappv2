@@ -16,9 +16,68 @@
       "title": "Settings",
       "addToNavigation": true,
       "icon": "settings"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "schoolView",
+      "components": [],
+      "title": "School",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "allschoolsView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "longText",
+                  "dataBindingRelationChildren": "[]",
+                  "title": "Long text",
+                  "inputType": "longText",
+                  "dataBindingOptional": "Description"
+                }
+              ],
+              "name": "editableListForm1",
+              "formType": "detail"
+            }
+          ],
+          "name": "allschoolsViewModel",
+          "dataProvider": "schools",
+          "collection": "Result",
+          "headerField": "Location",
+          "isMapView": false,
+          "pullToRefresh": true,
+          "endlessScroll": false,
+          "deleteItemButton": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Location",
+          "addItemForm": false,
+          "editItemForm": false
+        }
+      ],
+      "title": "All Schools",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "schools",
+      "title": "Schools",
+      "source": "json",
+      "url": "https://www1.lsr7.org/schools.json"
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "drawer",
   "view": "homeView",
