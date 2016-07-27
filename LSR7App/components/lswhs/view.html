@@ -14,10 +14,32 @@
                 <br> Lee's Summit, Missouri • 64082</p>
 
         </div>
+
+
+
+
         <div data-role="tabstrip" class="tab_schools">
-            <button class="schoolButton">  
-<a href="tel:8169864000" data-icon="phone-e" data-rel="external" class="schools_btn">Call</a>
-            </button>
+            <button class="schoolButton">   <a data-role="button" data-rel="actionsheet"  data-icon="phone-e" href="#actionsheet">Call</a></button>
+  <ul id="actionsheet" data-role="actionsheet" class="schools_calling"  data-click="navigateToAddress" data-popup='{"transition": "slide", "height": "auto", "width": 200, "direction": "left" }'>
+          <li>
+            <a data-action="onCallMain">
+                Call Main Office
+            </a>
+        </li>
+          <li>
+            <a data-action="onCallAttendance">
+                Call Attendance Office
+            </a>
+        </li>
+                <li>
+            <a data-action="onCallCounseling">
+                Call Counseling Center
+            </a>
+        </li>
+            
+       
+  </ul>
+       
             <button class="schoolButton">
             <a href="mailto:david.sharp@lsr7.net" data-icon="email-e" data-rel="external" class="schools_btn">Email</a>
             </button>
@@ -28,7 +50,21 @@
 <hr class="schools_hr">
         <img src="img/lswhs_drsharp.jpg" width "50%" height="150px" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
         <h3 class="AdminImgH3">Dr. David Sharp</h3>
-        <h5 class="AdminImgH5">principal</h5>
+        <h5 class="AdminImgH5">Principal</h5>
     </div>
+<script>
+
+      function onCallMain(){
+        document.location.href = 'tel:816986400';
+      }
+           function onCallAttendance(){
+        document.location.href = 'tel:8169864002';
+      } 
+               function onCallCounseling(){
+        document.location.href = 'tel:8169864003';
+      } 
+    
+    </script>
+   
     <!-- END_CUSTOM_CODE_lswhs -->
 </div>

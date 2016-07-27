@@ -503,7 +503,7 @@
     padding: 10px 0;
 }
 .schools_hr {margin:0 10px;    border-color: rgb(171, 208, 239); }
-
+.schools_calling li a .km-icon{ display:none}
 .tab_schools {
         text-align:left;
     padding:.5rem 0!important;
@@ -511,6 +511,7 @@
 
 .km-flat .km-tabstrip .km-button.schools_btn {
     background-color: #4D8CAC;
+    color:white;
 }
 
 .km-phone-e:after,
@@ -532,6 +533,21 @@
     content: "\e0dc";
         margin-top:4px;
 }
+
+.km-goback-e:after,
+.km-goback-e:before {
+     
+    content: "\e217";
+        margin-top:4px;
+     -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+
 
 .AdminImgH3 {
     color: rgb(171, 208, 239);
