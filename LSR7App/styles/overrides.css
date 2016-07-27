@@ -1,5 +1,5 @@
 /* Colors */
-/*Theme overides  - .box-shadow is deleted*/
+/* Theme overides  - .box-shadow is deleted */
 .km-flat,
 .km-flat .km-navbar,
 .km-flat .k-toolbar,
@@ -83,7 +83,7 @@
   background: rgba(0, 0, 0, 0.1);
 }
 /* Forms */
-.km-flat .km-label-above {
+.km-flat .km-label-above > :first-child:not(:last-child) {
   color: #bababa;
 }
 .km-flat .km-list input[type=password],
@@ -311,9 +311,10 @@
 /* Links */
 .km-flat a.link {
   color: #3498db;
+  text-decoration: none;
 }
 /* form label position */
-.km-flat .form-content .form-content-item .km-label-above {
+.km-flat .form-content .form-content-item .km-label-above > :first-child:not(:last-child) {
   font-size: 0.8em;
 }
 .km-flat .form-content .form-content-item .km-label-above input:not([type='checkbox']):not([type='radio']),
@@ -340,4 +341,10 @@
 }
 #navigation-show-more-view {
   background-color: #f4f4f4;
+}
+.status {
+  display: block;
+  font-style: italic;
+  color: #be5138;
+  text-align: center;
 }

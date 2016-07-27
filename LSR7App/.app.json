@@ -33,6 +33,8 @@
           "type": "kendo-ui-mobile:editableList",
           "listExtraFields": [],
           "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
           "components": [
             {
               "type": "kendo-ui-mobile:editableListForm",
@@ -41,6 +43,7 @@
                   "type": "kendo-ui-mobile:editableListFormField",
                   "name": "longText",
                   "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
                   "title": "Long text",
                   "inputType": "longText",
                   "dataBindingOptional": "Description"
@@ -54,19 +57,31 @@
           "dataProvider": "schools",
           "collection": "Result",
           "headerField": "Location",
-          "isMapView": false,
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "deleteItemConfirmation": true,
           "pullToRefresh": true,
           "endlessScroll": false,
-          "deleteItemButton": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
           "detailHeaderFieldSource": "dataBound",
-          "detailHeaderField": "Location",
-          "addItemForm": false,
-          "editItemForm": false
+          "detailHeaderField": "Location"
         }
       ],
       "title": "All Schools",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "lswhs",
+      "components": [],
+      "title": "LSWHS",
+      "addToNavigation": true,
+      "icon": "home"
     }
   ],
   "dataProviders": [

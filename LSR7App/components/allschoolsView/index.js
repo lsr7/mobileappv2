@@ -66,8 +66,15 @@ app.allschoolsView = kendo.observable({
                 }
             },
             serverFiltering: true,
+            serverSorting: true,
+            sort: {
+                field: 'CreatedAt',
+                dir: 'asc'
+            },
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
+        // start data sources
+        // end data sources
         allschoolsViewModel = kendo.observable({
             dataSource: dataSource,
             fixHierarchicalData: function(data) {
