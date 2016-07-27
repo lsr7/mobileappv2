@@ -531,6 +531,6 @@
     color: rgb(171, 208, 239);
 }
 
-
+.schoolButton {border: none; background-color: rgb(77, 140, 172); margin: 10px;}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
