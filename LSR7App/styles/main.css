@@ -486,16 +486,44 @@
     color: #fff
 }
 
+.schools h4 {
+    color: #ffffff;
+    font-size: 22px!important;
+    margin-top: 0;
+}
 
+.schools p {
+    color: #ffffff;
+    font-size: 15px!important;
+}
 
+.schools .header {
+    background-color: #4D8CAC;
+    padding: 10px;
+}
 
+.tab_schools {
+    border-bottom: 4px solid #777
+}
 
+.km-flat .km-tabstrip .km-button.schools_btn {
+    background-color: #4D8CAC;
+}
 
+.km-phone-e:after,
+.km-phone-e:before {
+    content: "\e326";
+}
 
+.km-email-e:after,
+.km-email-e:before {
+    content: "\e099";
+}
 
-
-
-
+.km-website-e:after,
+.km-website-e:before {
+    content: "\e0dc";
+}
 
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */

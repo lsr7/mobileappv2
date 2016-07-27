@@ -19,14 +19,6 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "schoolView",
-      "components": [],
-      "title": "School",
-      "addToNavigation": true,
-      "icon": "home"
-    },
-    {
-      "type": "kendo-ui-mobile:view",
       "name": "allschoolsView",
       "components": [
         {
@@ -60,7 +52,6 @@
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
-          "deleteItemConfirmation": true,
           "pullToRefresh": true,
           "endlessScroll": false,
           "isMapView": false,
@@ -82,6 +73,41 @@
       "title": "LSWHS",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "schoolView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "schoolViewModel",
+          "dataProvider": "schools",
+          "collection": "Result",
+          "headerField": "Location",
+          "iconField": false,
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Text",
+          "detailSubHeaderField": "Location",
+          "detailDescriptionField": "Description"
+        }
+      ],
+      "title": "School",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
   "dataProviders": [
@@ -99,5 +125,5 @@
   "skin": "flat",
   "skinMainColor": "#1a1a1a",
   "skinTextColor": "#ffffff",
-  "skinAccentColor": "#3498db"
+  "skinAccentColor": "#4d8cac"
 }
