@@ -490,11 +490,13 @@
     color: #ffffff;
     font-size: 22px!important;
     margin-top: 0;
+    margin-left: 20px;
 }
 
 .schools p {
     color: #ffffff;
     font-size: 15px!important;
+    margin-left: 30px;
 }
 
 .schools .header {
@@ -524,6 +526,11 @@
 .km-website-e:before {
     content: "\e0dc";
 }
+
+.AdminImgH3 {
+    color: rgb(171, 208, 239);
+}
+
 
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
