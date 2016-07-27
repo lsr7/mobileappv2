@@ -489,23 +489,24 @@
 .schools h4 {
     color: #ffffff;
     font-size: 22px!important;
-    margin-top: 0;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .schools p {
     color: #ffffff;
     font-size: 15px!important;
-    margin-left: 30px;
 }
 
 .schools .header {
     background-color: #4D8CAC;
-    padding: 10px;
+    padding: 10px 0;
 }
+.schools_hr {margin:0 10px;    border-color: rgb(171, 208, 239); }
 
 .tab_schools {
-    border-bottom: 4px solid #777
+        text-align:left;
+    padding:.5rem 0!important;
 }
 
 .km-flat .km-tabstrip .km-button.schools_btn {
@@ -515,6 +516,9 @@
 .km-phone-e:after,
 .km-phone-e:before {
     content: "\e326";
+        font-size:1.5rem;
+    text-align:center;
+    margin-top:5px;
 }
 
 .km-email-e:after,
@@ -524,7 +528,9 @@
 
 .km-website-e:after,
 .km-website-e:before {
+            font-size:1.9rem;
     content: "\e0dc";
+        margin-top:4px;
 }
 
 .AdminImgH3 {
@@ -532,5 +538,7 @@
 }
 
 .schoolButton {border: none; background-color: rgb(77, 140, 172); margin: 10px;}
+.schoolButton a{width:60px}
+.schoolButton a .km-text {font-size:1rem}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
