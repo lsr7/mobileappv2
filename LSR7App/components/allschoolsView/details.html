@@ -19,8 +19,7 @@
         </div>
         <div class="header">
             <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
-            <p class="school_address">2600 SW Ward Road
-                <br> Lee's Summit, Missouri • 64082</p>
+            <p class="school_address" data-bind="attr: { src: currentItem.Building_Address }" ></p>
         </div>
 
 
@@ -47,7 +46,7 @@
   </ul>
        
             <button class="schoolButton">
-            <a href="mailto:david.sharp@lsr7.net" data-icon="email-e" data-rel="external" class="schools_btn">Email</a>
+            <a href="" data-icon="email-e" data-rel="external" class="schools_btn">Map</a>
             </button>
             <button class="schoolButton">
             <a href="#" class="schools_btn" data-rel="external" onclick="window.open('http://lswhs.lsr7.org/', '_system', 'location=yes'); return false;" data-icon="website-e">Website</a>
@@ -61,7 +60,7 @@
 <script>
 
       function onCallMain(){
-        document.location.href = 'tel:8169864000';
+        document.location.href = 'tel:#:Main_Phone#;
       }
            function onCallAttendance(){
         document.location.href = 'tel:8169864002';
