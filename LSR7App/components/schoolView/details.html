@@ -6,20 +6,19 @@
         </div>
     </header>
 
-    <div class="details-content">
-        <div class="km-listview-wrapper">
-            <ul class="km-listview km-list km-listinset details-fields">
-                <li>
-                    <h3 data-bind="text: currentItem.Location"></h3></li>
-                <li>
-                    <p data-bind="text: currentItem.Description"></p>
-                </li>
-
-            </ul>
-        </div>
-    </div>
     <!-- START_CUSTOM_CODE_schoolViewModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
+    <div class="details-content">
+      <img  data-bind="attr: { src: currentItem.SchoolImage }">
+   
+             
+                    <h3 data-bind="text: currentItem.Location"></h3>
+                  
+                    <p data-bind="text: currentItem.Description"></p>
+        
+
+
+    </div>
     <!-- END_CUSTOM_CODE_schoolViewModel -->
 </div>
