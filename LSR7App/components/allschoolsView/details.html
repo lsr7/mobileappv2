@@ -53,14 +53,15 @@
             </button>
         </div>
 <hr class="schools_hr">
-        <img src="img/lswhs_drsharp.jpg" width "50%" height="150px" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
-        <h3 class="AdminImgH3">Dr. David Sharp</h3>
-        <h5 class="AdminImgH5">Principal</h5>
+                  <img  data-bind="attr: { src: currentItem.Principal_Image }" width="50%" height="150px" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
+
+        <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name">Dr. David Sharp</h3>
+        <h5 class="AdminImgH5" >Principal</h5>
     </div>
 <script>
 
       function onCallMain(){
-        document.location.href = 'tel:#:Main_Phone#;
+        document.location.href = 'tel:#:currentItem.Main_Phone#';
       }
            function onCallAttendance(){
         document.location.href = 'tel:8169864002';
