@@ -9,12 +9,78 @@
     <!-- START_CUSTOM_CODE_allschoolsViewModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <div class="details-content">
-      <img  data-bind="attr: { src: currentItem.Buillding_Image }" style="width:100%">
-   
+        
+        
+           <div class="schools">
+
+
+        <div>
+                <img  data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
+        </div>
+        <div class="header">
+            <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
+            <p class="school_address">2600 SW Ward Road
+                <br> Lee's Summit, Missouri • 64082</p>
+
+        </div>
+
+
+
+
+        <div data-role="tabstrip" class="tab_schools">
+            <button class="schoolButton">   <a data-role="button" data-rel="actionsheet"  data-icon="phone-e" href="#actionsheet">Call</a></button>
+  <ul id="actionsheet" data-role="actionsheet" class="schools_calling"  data-click="navigateToAddress" data-popup='{"transition": "slide", "height": "auto", "width": 200, "direction": "left" }'>
+          <li>
+            <a data-action="onCallMain">
+                Call Main Office
+            </a>
+        </li>
+          <li>
+            <a data-action="onCallAttendance">
+                Call Attendance Office
+            </a>
+        </li>
+                <li>
+            <a data-action="onCallCounseling">
+                Call Counseling Center
+            </a>
+        </li>
+            
+       
+  </ul>
+       
+            <button class="schoolButton">
+            <a href="mailto:david.sharp@lsr7.net" data-icon="email-e" data-rel="external" class="schools_btn">Email</a>
+            </button>
+            <button class="schoolButton">
+            <a href="#" class="schools_btn" data-rel="external" onclick="window.open('http://lswhs.lsr7.org/', '_system', 'location=yes'); return false;" data-icon="website-e">Website</a>
+            </button>
+        </div>
+<hr class="schools_hr">
+        <img src="img/lswhs_drsharp.jpg" width "50%" height="150px" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
+        <h3 class="AdminImgH3">Dr. David Sharp</h3>
+        <h5 class="AdminImgH5">Principal</h5>
+    </div>
+<script>
+
+      function onCallMain(){
+        document.location.href = 'tel:8169864000';
+      }
+           function onCallAttendance(){
+        document.location.href = 'tel:8169864002';
+      } 
+               function onCallCounseling(){
+        document.location.href = 'tel:8169864003';
+      } 
+    
+    </script>
+        
+        
+
              
-                    <h3 data-bind="text: currentItem.Location"></h3>
+      
                   
-                    <p data-bind="text: currentItem.Description"></p>
+
         
 
 
