@@ -526,6 +526,13 @@
 .km-email-e:before {
     content: "\e099";
 }
+.km-map-e:after,
+.km-map-e:before {
+            font-size:1.5rem;
+    content: "\e300";
+}
+
+
 
 .km-website-e:after,
 .km-website-e:before {

@@ -46,22 +46,23 @@
   </ul>
        
             <button class="schoolButton">
-            <a href="" data-icon="email-e" data-rel="external" class="schools_btn">Map</a>
+            <a href="" data-icon="map-e" data-rel="external" class="schools_btn">Map</a>
             </button>
             <button class="schoolButton">
             <a href="#" class="schools_btn" data-rel="external" onclick="window.open('http://lswhs.lsr7.org/', '_system', 'location=yes'); return false;" data-icon="website-e">Website</a>
             </button>
         </div>
 <hr class="schools_hr">
-                  <img  data-bind="attr: { src: currentItem.Principal_Image }" width="50%" height="150px" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
+                  <img  data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
 
-        <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name">Dr. David Sharp</h3>
+        <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name"></h3>
         <h5 class="AdminImgH5" >Principal</h5>
     </div>
 <script>
+var mainphone = kendo.template("#=currentItem.Main_Phone #");
 
       function onCallMain(){
-        document.location.href = 'tel:#:currentItem.Main_Phone#';
+        document.location.href = 'tel:'+mainphone;
       }
            function onCallAttendance(){
         document.location.href = 'tel:8169864002';
