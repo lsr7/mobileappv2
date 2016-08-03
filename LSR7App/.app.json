@@ -108,6 +108,22 @@
       "title": "School",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "powerSchool",
+      "components": [],
+      "title": "PowerSchool",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "transportation",
+      "components": [],
+      "title": "Transportation",
+      "addToNavigation": true,
+      "icon": "home"
     }
   ],
   "dataProviders": [

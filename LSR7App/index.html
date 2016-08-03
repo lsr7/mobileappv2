@@ -18,6 +18,8 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/transportation/index.js"></script>
+    <script src="components/powerSchool/index.js"></script>
     <script src="components/schoolView/index.js"></script>
     <script src="components/lswhs/index.js"></script>
     <script src="components/allschoolsView/index.js"></script>
@@ -31,18 +33,18 @@
             </div>
         </header>
     </div>
-    
-        <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+
+    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <div data-role="layout" data-id="mainwithback">
         <header data-role="header">
             <div data-role="navbar">
-                           <a class="nav-button" data-align="left" data-role="backbutton" data-icon="goback-e"></a>
+                <a class="nav-button" data-align="left" data-role="backbutton" data-icon="goback-e"></a>
                 <span data-role="view-title"></span>
                 <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
         </header>
     </div>
-      <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+    <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">
@@ -63,6 +65,8 @@
             <li><a href="components/allschoolsView/view.html" data-icon="organize">All Schools</a></li>
             <li><a href="components/lswhs/view.html" data-icon="home">LSWHS</a></li>
             <li><a href="components/schoolView/view.html" data-icon="organize">School</a></li>
+            <li><a class="button" id="openExternalInAppBrowser">PowerSchool</a></li>
+            <li><a class="button" id="openExternalInAppBrowser2">Transportation</a></li>
         </ul>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->

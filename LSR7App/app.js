@@ -99,6 +99,36 @@
 }());
 
 // START_CUSTOM_CODE_kendoUiMobileApp
-// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	var app;
+	navigator.splashscreen.hide();
+	app = new Application();
+	app.run();
+}
+
+function Application() {
+}
+
+Application.prototype = {
+
+	run: function() {
+		var that = this,
+			openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser");
+			openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser);
+        
+			openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser2");
+			openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser2);
+	},
+	openExternalInAppBrowser:  function () {
+		window.open("https://powerschool.lsr7.org/public/", "_blank");
+	},
+    
+    openExternalInAppBrowser2:  function () {
+		window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
+	},
+}
 
 // END_CUSTOM_CODE_kendoUiMobileApp
