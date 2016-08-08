@@ -534,15 +534,6 @@
     margin-top: 4px;
 }
 
-
-
-.km-website-e:after,
-.km-website-e:before {
-            font-size:1.9rem;
-    content: "\e0dc";
-        margin-top:4px;
-}
-
 .km-goback-e:after,
 .km-goback-e:before {
      
@@ -565,5 +556,31 @@
 .schoolButton {border: none; background-color: rgb(77, 140, 172); margin: 10px;}
 .schoolButton a{width:60px}
 .schoolButton a .km-text {font-size:1rem}
+
+/*Font Awesome Icons*/
+.fa .km-icon:after,
+.fa .km-icon:before
+{
+    font: 1em/1em 'FontAwesome';
+}
+
+.km-bus:after,
+.km-bus:before {
+  content: "\F207";
+}
+
+.km-globe:after,
+.km-globe:before {
+  content: "\F0AC";
+}
+
+.km-website:after,
+.km-website:before {
+            font-size:1.5rem;
+    content: "\F245";
+        margin-top:4px;
+    text-align: center;
+    
+}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
