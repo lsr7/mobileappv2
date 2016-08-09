@@ -585,4 +585,8 @@
     margin-bottom: 4px!important;
 }
 
+.km-lunch:after,
+.km-lunch:before {
+  content: "\F0F5";
+}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
