@@ -526,13 +526,6 @@
 .km-email-e:before {
     content: "\e099";
 }
-.km-map-e:after,
-.km-map-e:before {
-            font-size:1.5rem;
-    content: "\e0bb";
-    text-align: center;
-    margin-top: 4px;
-}
 
 .km-goback-e:after,
 .km-goback-e:before {
@@ -576,11 +569,20 @@
 
 .km-website:after,
 .km-website:before {
-            font-size:1.5rem;
+           font-size: 0.8em!important;
     content: "\F245";
         margin-top:4px;
     text-align: center;
     
+}
+
+.km-map:after,
+.km-map:before {
+            font-size:1.5rem;
+    content: "\F041";
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 4px!important;
 }
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
