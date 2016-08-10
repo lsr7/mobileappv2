@@ -121,6 +121,7 @@ Application.prototype = {
         
 			openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser2");
 			openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser2);
+        
 	},
 	openExternalInAppBrowser:  function () {
 		window.open("https://powerschool.lsr7.org/public/", "_blank");
@@ -129,6 +130,7 @@ Application.prototype = {
     openExternalInAppBrowser2:  function () {
 		window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
 	},
+   
 }
 
 // END_CUSTOM_CODE_kendoUiMobileApp
