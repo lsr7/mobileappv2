@@ -11,11 +11,11 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "settingsView",
+      "name": "allBuildingsView",
       "components": [],
-      "title": "Settings",
+      "title": "All Buildings",
       "addToNavigation": true,
-      "icon": "settings"
+      "icon": "edit"
     },
     {
       "type": "kendo-ui-mobile:view",
@@ -63,16 +63,14 @@
         }
       ],
       "title": "All Schools",
-      "addToNavigation": true,
-      "icon": "organize"
+      "addToNavigation": false
     },
     {
       "type": "kendo-ui-mobile:view",
       "name": "lswhs",
       "components": [],
       "title": "LSWHS",
-      "addToNavigation": true,
-      "icon": "home"
+      "addToNavigation": false
     },
     {
       "type": "kendo-ui-mobile:view",
@@ -100,11 +98,11 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "allBuildingsView",
+      "name": "settingsView",
       "components": [],
-      "title": "All Buildings",
+      "title": "Settings",
       "addToNavigation": true,
-      "icon": "edit"
+      "icon": "settings"
     },
     {
       "type": "kendo-ui-mobile:view",

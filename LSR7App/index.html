@@ -16,25 +16,17 @@
     <script src="app.js"></script>
     <script src="dataProviders/schools.js"></script>
     <script src="dataProviders/jsonDataProvider.js"></script>
-        <!-- START_CUSTOM_CODE_kendoUiMobileApp_assets -->
-    
-    <link href="styles/font-awesome.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic" rel="stylesheet" type="text/css">
-   <!-- END_CUSTOM_CODE_kendoUiMobileApp_assets -->
-    
-    
-    
 </head>
 
 <body id="kendoUiMobileApp">
     <script src="components/elementaryschoolsview/index.js"></script>
-    <script src="components/allBuildingsView/index.js"></script>
+    <script src="components/settingsView/index.js"></script>
     <script src="components/lunch/index.js"></script>
     <script src="components/transportation/index.js"></script>
     <script src="components/powerSchool/index.js"></script>
     <script src="components/lswhs/index.js"></script>
     <script src="components/allschoolsView/index.js"></script>
-    <script src="components/settingsView/index.js"></script>
+    <script src="components/allBuildingsView/index.js"></script>
     <script src="components/homeView/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
@@ -52,7 +44,7 @@
             </div>
         </header>
     </div>
-
+    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <div id="appDrawer" data-role="drawer" data-title="Navigation">
         <header data-role="header">
             <div data-role="navbar">
@@ -61,16 +53,14 @@
         </header>
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
-            <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
-            <li><a href="components/allschoolsView/view.html" data-icon="organize">All Schools</a></li>
-            <li><a href="components/lswhs/view.html" data-icon="home">LSWHS</a></li>
-            <li><a href="components/powerSchool/view.html" data-icon="home">PowerSchool</a></li>
-            <li><a href="components/transportation/view.html" class="fa" data-icon="bus">Transportation</a></li>
-            <li><a href="components/lunch/view.html" data-icon="trash">Lunch</a></li>
             <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
+            <li><a href="components/powerSchool/view.html" data-icon="home">PowerSchool</a></li>
+            <li><a href="components/transportation/view.html"><i class="fa fa-bus"></i> Transportation</a></li>
+            <li><a href="components/lunch/view.html"><i class="fa fa-cutlery"></i> Lunch</a></li>
+            <li><a href="components/settingsView/view.html"><i class="fa fa-cog"></i> Settings</a></li>
         </ul>
     </div>
-    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+
     <div data-role="layout" data-id="mainwithback">
         <header data-role="header">
             <div data-role="navbar">
@@ -80,6 +70,9 @@
             </div>
         </header>
     </div>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic" rel="stylesheet" type="text/css">
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
 

@@ -603,6 +603,6 @@
 .km-lunch:before {
     content: "\F0F5";
 }
-
+#navigation-container > li > a > span {font-family:'Roboto Condensed';font-weight:600}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
