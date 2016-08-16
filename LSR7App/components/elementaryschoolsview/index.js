@@ -1,18 +1,18 @@
 'use strict';
 
-app.schoolView = kendo.observable({
+app.elementaryschoolsview = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
 
-// START_CUSTOM_CODE_schoolView
+// START_CUSTOM_CODE_elementaryschoolsview
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_schoolView
+// END_CUSTOM_CODE_elementaryschoolsview
 (function(parent) {
-    var dataProvider = app.data.schools,
+    var dataProvider = app.data.jsonDataProvider,
         fetchFilteredData = function(paramFilter, searchFilter) {
-            var model = parent.get('schoolViewModel'),
+            var model = parent.get('elementaryschoolsviewModel'),
                 dataSource = model.get('dataSource');
 
             if (paramFilter) {
@@ -58,8 +58,8 @@ app.schoolView = kendo.observable({
                 data: 'Result',
                 model: {
                     fields: {
-                        'Location': {
-                            field: 'Location',
+                        'Building_Name': {
+                            field: 'Building_Name',
                             defaultValue: ''
                         },
                     }
@@ -75,7 +75,7 @@ app.schoolView = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         // start data sources
         // end data sources
-        schoolViewModel = kendo.observable({
+        elementaryschoolsviewModel = kendo.observable({
             dataSource: dataSource,
             fixHierarchicalData: function(data) {
                 var result = {},
@@ -125,26 +125,26 @@ app.schoolView = kendo.observable({
                 return result;
             },
             itemClick: function(e) {
-                var dataItem = e.dataItem || schoolViewModel.originalItem;
+                var dataItem = e.dataItem || elementaryschoolsviewModel.originalItem;
 
-                app.mobileApp.navigate('#components/schoolView/details.html?uid=' + dataItem.uid);
+                app.mobileApp.navigate('#components/elementaryschoolsview/details.html?uid=' + dataItem.uid);
 
             },
             detailsShow: function(e) {
-                schoolViewModel.setCurrentItemByUid(e.view.params.uid);
+                elementaryschoolsviewModel.setCurrentItemByUid(e.view.params.uid);
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
-                    dataSource = schoolViewModel.get('dataSource'),
+                    dataSource = elementaryschoolsviewModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
 
-                if (!itemModel.Text) {
-                    itemModel.Text = String.fromCharCode(160);
+                if (!itemModel.Location) {
+                    itemModel.Location = String.fromCharCode(160);
                 }
 
-                schoolViewModel.set('originalItem', itemModel);
-                schoolViewModel.set('currentItem',
-                    schoolViewModel.fixHierarchicalData(itemModel));
+                elementaryschoolsviewModel.set('originalItem', itemModel);
+                elementaryschoolsviewModel.set('currentItem',
+                    elementaryschoolsviewModel.fixHierarchicalData(itemModel));
 
                 return itemModel;
             },
@@ -166,10 +166,10 @@ app.schoolView = kendo.observable({
 
     if (typeof dataProvider.sbProviderReady === 'function') {
         dataProvider.sbProviderReady(function dl_sbProviderReady() {
-            parent.set('schoolViewModel', schoolViewModel);
+            parent.set('elementaryschoolsviewModel', elementaryschoolsviewModel);
         });
     } else {
-        parent.set('schoolViewModel', schoolViewModel);
+        parent.set('elementaryschoolsviewModel', elementaryschoolsviewModel);
     }
 
     parent.set('onShow', function(e) {
@@ -191,9 +191,9 @@ app.schoolView = kendo.observable({
         fetchFilteredData(param);
     });
 
-})(app.schoolView);
+})(app.elementaryschoolsview);
 
-// START_CUSTOM_CODE_schoolViewModel
+// START_CUSTOM_CODE_elementaryschoolsviewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_schoolViewModel
+// END_CUSTOM_CODE_elementaryschoolsviewModel
