@@ -502,24 +502,32 @@
     background-color: #4D8CAC;
     padding: 10px 0;
 }
-.schools_hr {margin:0 10px;    border-color: rgb(171, 208, 239); }
-.schools_calling li a .km-icon{ display:none}
+
+.schools_hr {
+    margin: 0 10px;
+    border-color: rgb(171, 208, 239);
+}
+
+.schools_calling li a .km-icon {
+    display: none
+}
+
 .tab_schools {
-        text-align:left;
-    padding:.5rem 0!important;
+    text-align: left;
+    padding: .5rem 0!important;
 }
 
 .km-flat .km-tabstrip .km-button.schools_btn {
     background-color: #4D8CAC;
-    color:white;
+    color: white;
 }
 
 .km-phone-e:after,
 .km-phone-e:before {
     content: "\e326";
-        font-size:1.5rem;
-    text-align:center;
-    margin-top:5px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .km-email-e:after,
@@ -529,56 +537,62 @@
 
 .km-goback-e:after,
 .km-goback-e:before {
-     
     content: "\e217";
-        margin-top:4px;
-     -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+    margin-top: 4px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
-
-
-
 
 .AdminImgH3 {
     color: rgb(171, 208, 239);
 }
 
-.schoolButton {border: none; background-color: rgb(77, 140, 172); margin: 10px;}
-.schoolButton a{width:60px}
-.schoolButton a .km-text {font-size:1rem}
+.schoolButton {
+    border: none;
+    background-color: rgb(77, 140, 172);
+    margin: 10px;
+}
+
+.schoolButton a {
+    width: 60px
+}
+
+.schoolButton a .km-text {
+    font-size: 1rem
+}
+
 
 /*Font Awesome Icons*/
+
 .fa .km-icon:after,
-.fa .km-icon:before
-{
+.fa .km-icon:before {
     font: 1em/1em 'FontAwesome';
 }
 
 .km-bus:after,
 .km-bus:before {
-  content: "\F207";
+    content: "\F207";
 }
 
 .km-globe:after,
 .km-globe:before {
-  content: "\F0AC";
+    content: "\F0AC";
 }
 
 .km-website:after,
 .km-website:before {
-           font-size: 0.8em!important;
+    font-size: 0.8em!important;
     content: "\F245";
-        margin-top:4px;
+    margin-top: 4px;
     text-align: center;
-    
 }
 
 .km-map:after,
 .km-map:before {
-            font-size:1.5rem;
+    font-size: 1.5rem;
     content: "\F041";
     text-align: center;
     margin-top: 2px;
@@ -587,6 +601,8 @@
 
 .km-lunch:after,
 .km-lunch:before {
-  content: "\F0F5";
+    content: "\F0F5";
 }
+
+
 /* END_CUSTOM_CODE_kendoUiMobileApp */

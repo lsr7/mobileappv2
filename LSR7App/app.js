@@ -103,34 +103,33 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	var app;
-	navigator.splashscreen.hide();
-	app = new Application();
-	app.run();
+    var app;
+    navigator.splashscreen.hide();
+    app = new Application();
+    app.run();
 }
 
-function Application() {
-}
+function Application() {}
 
 Application.prototype = {
 
-	run: function() {
-		var that = this,
-			openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser");
-			openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser);
-        
-			openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser2");
-			openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser2);
-        
-	},
-	openExternalInAppBrowser:  function () {
-		window.open("https://powerschool.lsr7.org/public/", "_blank");
-	},
-    
-    openExternalInAppBrowser2:  function () {
-		window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
-	},
-   
+    run: function() {
+        var that = this,
+            openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser");
+        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser);
+
+        openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser2");
+        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser2);
+
+    },
+    openExternalInAppBrowser: function() {
+        window.open("https://powerschool.lsr7.org/public/", "_blank");
+    },
+
+    openExternalInAppBrowser2: function() {
+        window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
+    },
+
 }
 
 // END_CUSTOM_CODE_kendoUiMobileApp

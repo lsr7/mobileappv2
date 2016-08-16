@@ -76,41 +76,6 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "schoolView",
-      "components": [
-        {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "addScreenExtraFields": [],
-          "editScreenExtraFields": [],
-          "components": [],
-          "name": "schoolViewModel",
-          "dataProvider": "schools",
-          "collection": "Result",
-          "headerField": "Location",
-          "iconField": false,
-          "addItemForm": false,
-          "editItemForm": false,
-          "deleteItemButton": false,
-          "pullToRefresh": false,
-          "endlessScroll": false,
-          "isMapView": false,
-          "serverSideSortingField": "CreatedAt",
-          "serverSideSortingDirection": "asc",
-          "serverSidePaging": false,
-          "detailHeaderFieldSource": "dataBound",
-          "detailHeaderField": "Text",
-          "detailSubHeaderField": "Location",
-          "detailDescriptionField": "Description"
-        }
-      ],
-      "title": "School",
-      "addToNavigation": true,
-      "icon": "organize"
-    },
-    {
-      "type": "kendo-ui-mobile:view",
       "name": "powerSchool",
       "components": [],
       "title": "PowerSchool",
@@ -132,6 +97,45 @@
       "title": "Lunch",
       "addToNavigation": true,
       "icon": "trash"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "allBuildingsView",
+      "components": [],
+      "title": "All Buildings",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "elementaryschoolsview",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "elementaryschoolsviewModel",
+          "dataProvider": "jsonDataProvider",
+          "collection": "Result",
+          "headerField": "Building_Name",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Location"
+        }
+      ],
+      "title": "Elementary Schools",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [
@@ -141,6 +145,13 @@
       "title": "Schools",
       "source": "json",
       "url": "https://www1.lsr7.org/schools.json"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonDataProvider",
+      "title": "Elementary Schools",
+      "source": "json",
+      "url": "https://www1.lsr7.org/mobile_app/elementary_schools.json"
     }
   ],
   "name": "kendoUiMobileApp",
