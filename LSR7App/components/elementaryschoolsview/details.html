@@ -71,6 +71,9 @@
         </div>
   <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
    <input type="hidden" id="Main_Phone" data-bind="value: currentItem.Main_Phone">      
+      <input type="hidden" id="Attendance_Phone" data-bind="value: currentItem.Attendance_Phone">
+      <input type="hidden" id="Counseling_Phone" data-bind="value: currentItem.Counseling_Phone">        
+        
         <script>
                function go_Website() {
                var go_web = document.getElementById('Building_Website').value;
@@ -84,11 +87,13 @@
             }
 
             function onCallAttendance() {
-                document.location.href = 'tel:8169864002';
+            var attendancephone = document.getElementById('Attendance_Phone').value;
+                document.location.href = 'tel:' + attendancephone;
             }
 
             function onCallCounseling() {
-                document.location.href = 'tel:8169864003';
+                       var counselingphone = document.getElementById('Counseling_Phone').value;     
+                document.location.href = 'tel:' + counselingphone;
             }
         </script>
 
