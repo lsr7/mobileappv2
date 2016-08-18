@@ -14,11 +14,11 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
-    <script src="dataProviders/schools.js"></script>
     <script src="dataProviders/jsonDataProvider.js"></script>
     <script src="dataProviders/jsonDataProvider1.js"></script>
     <script src="dataProviders/jsonDataProvider2.js"></script>
     <script src="dataProviders/jsonDataProvider3.js"></script>
+
 </head>
 
 <body id="kendoUiMobileApp">
@@ -54,6 +54,8 @@
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
+            <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
+            <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
         </ul>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
@@ -70,6 +72,8 @@
             <li><a href="#" onclick="app.openLink('http://www.infofinderi.com/tfi/address.aspx?cid=LSRS13J5TQSE7/');"><i class="fa fa-bus"></i> Transportation</a></li>
             <li><a href="#" onclick="app.openLink('http://leessummitschoolnutrition.com/?page=menus');"><i class="fa fa-cutlery"></i> Lunch</a></li>
             <li><a href="components/settingsView/view.html"><i class="fa fa-cog"></i> Settings</a></li>
+            <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
+            <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
         </ul>
     </div>
 

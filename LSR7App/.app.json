@@ -160,13 +160,6 @@
   "dataProviders": [
     {
       "type": "kendo-ui-mobile:dataProvider",
-      "name": "schools",
-      "title": "Schools",
-      "source": "json",
-      "url": "https://www1.lsr7.org/schools.json"
-    },
-    {
-      "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider",
       "title": "Elementary Schools",
       "source": "json",
