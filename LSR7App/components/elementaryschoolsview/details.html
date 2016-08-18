@@ -58,7 +58,7 @@
                     <a href="" data-icon="map" class="fa" data-rel="external">Map</a>
                 </button>
                 <button class="schoolButton">
-                   <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
+
                   <a onclick="go_Website()"  class="fa" data-icon="website">
                 Website</a>
                 </button>
@@ -69,6 +69,8 @@
             <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name"></h3>
             <h5 class="AdminImgH5">Principal</h5>
         </div>
+  <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
+   <input type="hidden" id="Main_Phone" data-bind="value: currentItem.Main_Phone">      
         <script>
                function go_Website() {
                var go_web = document.getElementById('Building_Website').value;
@@ -77,6 +79,7 @@
        
 
             function onCallMain() {
+             var mainphone = document.getElementById('Main_Phone').value;
                 document.location.href = 'tel:' + mainphone;
             }
 
