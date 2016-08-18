@@ -115,18 +115,18 @@ Application.prototype = {
 
     run: function() {
         var that = this,
-            openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser");
-        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser);
+            openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser_PowerSchool");
+        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser_PowerSchool);
 
-        openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser2");
-        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser2);
+        openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser_Transportation");
+        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser_Transportation);
 
     },
-    openExternalInAppBrowser: function() {
+    openExternalInAppBrowser_PowerSchool: function() {
         window.open("https://powerschool.lsr7.org/public/", "_blank");
     },
 
-    openExternalInAppBrowser2: function() {
+    openExternalInAppBrowser_Transportation: function() {
         window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
     },
 
