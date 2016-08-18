@@ -134,6 +134,99 @@
       ],
       "title": "Elementary Schools",
       "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "middleschoolsview",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "middleschoolsviewModel",
+          "dataProvider": "jsonDataProvider1",
+          "collection": "Result",
+          "headerField": "Building_Name",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Location"
+        }
+      ],
+      "title": "Middle Schools",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "highschoolsview",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "highschoolsviewModel",
+          "dataProvider": "jsonDataProvider2",
+          "collection": "Result",
+          "headerField": "Building_Name",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Location"
+        }
+      ],
+      "title": "High Schools",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "otherbuildingsview",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "otherbuildingsviewModel",
+          "dataProvider": "jsonDataProvider3",
+          "collection": "Result",
+          "headerField": "Building_Name",
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": false,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Location"
+        }
+      ],
+      "title": "Other Buildings",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [
@@ -150,6 +243,27 @@
       "title": "Elementary Schools",
       "source": "json",
       "url": "https://www1.lsr7.org/mobile_app/elementary_schools.json"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonDataProvider1",
+      "title": "Middle Schools",
+      "source": "json",
+      "url": "https://www1.lsr7.org/mobile_app/middle_schools.json"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonDataProvider2",
+      "title": "High Schools",
+      "source": "json",
+      "url": "https://www1.lsr7.org/mobile_app/high_schools.json"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonDataProvider3",
+      "title": "Other Buildings",
+      "source": "json",
+      "url": "https://www1.lsr7.org/mobile_app/Other_schools.json"
     }
   ],
   "name": "kendoUiMobileApp",

@@ -1,0 +1,34 @@
+<div data-role="view" data-title="Other Buildings" data-layout="main-nonav" data-model="app.otherbuildingsview" data-show="app.otherbuildingsview.onShow" data-after-show="app.otherbuildingsview.afterShow">
+
+    <!-- START_CUSTOM_CODE_otherbuildingsview -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_otherbuildingsview -->
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left" class="backButtonWrapper" style="display: none;">Back</a>
+             <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            <span data-role="view-title"></span>
+
+        </div>
+    </header>
+
+
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="otherbuildingsviewModelTemplate" data-bind="source: otherbuildingsviewModel.dataSource, events: {click: otherbuildingsviewModel.itemClick}" data-pull-to-refresh="false"
+    data-endless-scroll="false">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_otherbuildingsviewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_otherbuildingsviewModel -->
+    <script type="text/x-kendo-template" id="otherbuildingsviewModelTemplate">
+        <div class="image-with-text">
+            # data = app.otherbuildingsview.otherbuildingsviewModel.fixHierarchicalData(data); #
+
+            <h3>#: data['Building_Name'] #</h3>
+
+        </div>
+    </script>
+</div>

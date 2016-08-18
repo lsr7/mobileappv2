@@ -1,0 +1,34 @@
+<div data-role="view" data-title="Middle Schools" data-layout="main-nonav" data-model="app.middleschoolsview" data-show="app.middleschoolsview.onShow" data-after-show="app.middleschoolsview.afterShow">
+
+    <!-- START_CUSTOM_CODE_middleschoolsview -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_middleschoolsview -->
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left" class="backButtonWrapper" style="display: none;">Back</a>
+             <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            <span data-role="view-title"></span>
+
+        </div>
+    </header>
+
+
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="middleschoolsviewModelTemplate" data-bind="source: middleschoolsviewModel.dataSource, events: {click: middleschoolsviewModel.itemClick}" data-pull-to-refresh="false"
+    data-endless-scroll="false">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_middleschoolsviewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_middleschoolsviewModel -->
+    <script type="text/x-kendo-template" id="middleschoolsviewModelTemplate">
+        <div class="image-with-text">
+            # data = app.middleschoolsview.middleschoolsviewModel.fixHierarchicalData(data); #
+
+            <h3>#: data['Building_Name'] #</h3>
+
+        </div>
+    </script>
+</div>
