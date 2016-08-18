@@ -54,11 +54,12 @@
 
                 </ul>
 
-                <button class="schoolButton">
+                <button class="schoolButton" v>
                     <a href="" data-icon="map" class="fa" data-rel="external">Map</a>
                 </button>
                 <button class="schoolButton">
-                  <a href="#"  data-bind="attr: { onclick: currentItem.Building_Website }" class="fa" data-icon="website">
+                   <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
+                  <a href="#" onclick="go_Website()"  class="fa" data-icon="website">
                 Website</a>
                 </button>
             </div>
@@ -69,7 +70,11 @@
             <h5 class="AdminImgH5">Principal</h5>
         </div>
         <script>
-            var mainphone = kendo.template("#=currentItem.Main_Phone #");
+               function go_Website() {
+               var go_web = document.getElementById('Building_Website').value;
+     window.open(go_web, '_blank');
+            }
+       
 
             function onCallMain() {
                 document.location.href = 'tel:' + mainphone;
