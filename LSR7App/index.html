@@ -15,7 +15,7 @@
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
     <script src="dataProviders/jsonDataProvider.js"></script>
-    <script src="dataProviders/jsonDataProvider1.js"></script>
+    <script src="dataProviders/jsonDataProvidser1.js"></script>
     <script src="dataProviders/jsonDataProvider2.js"></script>
     <script src="dataProviders/jsonDataProvider3.js"></script>
 
@@ -56,9 +56,9 @@
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
             <li><a href="components/allBuildingsView/view.html" data-icon="edit" class="jumpoutside">All Buildings</a></li>
-            <li><a href="#" onclick="app.openLink('https://powerschool.lsr7.org/');" data-icon="home">PowerSchool</a></li>
-            <li><a href="#" onclick="app.openLink('http://www.infofinderi.com/tfi/address.aspx?cid=LSRS13J5TQSE7/');"><i class="fa fa-bus"></i> Transportation</a></li>
-            <li><a href="#" onclick="app.openLink('http://leessummitschoolnutrition.com/?page=menus');"><i class="fa fa-cutlery"></i> Lunch</a></li>
+            <li><a id="openExternalInAppBrowser_PowerSchool" data-icon="home">PowerSchool</a></li>
+            <li><a id="openExternalInAppBrowser_Transportation"><i class="fa fa-bus"></i> Transportation</a></li>
+            <li><a id="openExternalInAppBrowser_Lunch"><i class="fa fa-cutlery"></i> Lunch</a></li>
             <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
             <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
         </ul>
@@ -73,9 +73,9 @@
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
             <li><a href="components/allBuildingsView/view.html" data-icon="edit" class="jumpoutside">All Buildings</a></li>
-            <li><a href="#" onclick="app.openLink('https://powerschool.lsr7.org/');" data-icon="home">PowerSchool</a></li>
-            <li><a href="#" onclick="app.openLink('http://www.infofinderi.com/tfi/address.aspx?cid=LSRS13J5TQSE7/');"><i class="fa fa-bus"></i> Transportation</a></li>
-            <li><a href="#" onclick="app.openLink('http://leessummitschoolnutrition.com/?page=menus');"><i class="fa fa-cutlery"></i> Lunch</a></li>
+            <li><a id="openExternalInAppBrowser_PowerSchool" data-icon="home">PowerSchool</a></li>
+            <li><a id="openExternalInAppBrowser_Transportation"><i class="fa fa-bus"></i> Transportation</a></li>
+            <li><a><i class="fa fa-cutlery"></i> Lunch</a></li>
             <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
             <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
         </ul>
