@@ -100,36 +100,10 @@
 
 // START_CUSTOM_CODE_kendoUiMobileApp
 
+
 document.addEventListener("deviceready", onDeviceReady, false);
-
 function onDeviceReady() {
-    var app;
-    navigator.splashscreen.hide();
-    app = new Application();
-    app.run();
-}
-
-function Application() {}
-
-Application.prototype = {
-
-    run: function() {
-        var that = this,
-            openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser_PowerSchool");
-        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser_PowerSchool);
-
-        openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser_Transportation");
-        openExternalInAppBrowser.addEventListener("click", that.openExternalInAppBrowser_Transportation);
-
-    },
-    openExternalInAppBrowser_PowerSchool: function() {
-        window.open("https://powerschool.lsr7.org/public/", "_blank");
-    },
-
-    openExternalInAppBrowser_Transportation: function() {
-        window.open("http://www.infofinderi.com/ifi/?cid=L", "_blank");
-    },
-
+    window.open = cordova.InAppBrowser.open;
 }
 
 // END_CUSTOM_CODE_kendoUiMobileApp
