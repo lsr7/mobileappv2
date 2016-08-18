@@ -6,7 +6,16 @@
         </div>
     </header>
 
+    <div class="details-content">
+        <div class="km-listview-wrapper">
+            <ul class="km-listview km-list km-listinset details-fields">
+
+
+            </ul>
+        </div>
+    </div>
     <!-- START_CUSTOM_CODE_elementaryschoolsviewModel -->
+
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <div class="details-content">
 
@@ -19,7 +28,7 @@
             </div>
             <div class="header">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
-                <p class="school_address"  data-bind="text: currentItem.Building_Address"></p>
+                <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
             </div>
 
 
@@ -49,7 +58,7 @@
                     <a href="" data-icon="map" class="fa" data-rel="external">Map</a>
                 </button>
                 <button class="schoolButton">
-                       <a  data-bind="attr: { href: currentItem.Building_Website }" class="fa" target="_blank" data-role="button" data-rel="external" data-icon="website">
+                    <a data-bind="attr: { href: currentItem.Building_Website }" class="fa" data-icon="website">
                 Website</a>
                 </button>
             </div>
@@ -63,7 +72,7 @@
             var mainphone = kendo.template("#=currentItem.Main_Phone #");
 
             function onCallMain() {
-                document.location.href = 'tel:'+mainphone;
+                document.location.href = 'tel:' + mainphone;
             }
 
             function onCallAttendance() {

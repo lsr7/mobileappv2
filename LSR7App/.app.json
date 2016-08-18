@@ -19,82 +19,10 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "allschoolsView",
-      "components": [
-        {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "addScreenExtraFields": [],
-          "editScreenExtraFields": [],
-          "components": [
-            {
-              "type": "kendo-ui-mobile:editableListForm",
-              "components": [
-                {
-                  "type": "kendo-ui-mobile:editableListFormField",
-                  "name": "longText",
-                  "dataBindingRelationChildren": "[]",
-                  "dataBindingMultipleSelectChildren": "[]",
-                  "title": "Long text",
-                  "inputType": "longText",
-                  "dataBindingOptional": "Description"
-                }
-              ],
-              "name": "editableListForm1",
-              "formType": "detail"
-            }
-          ],
-          "name": "allschoolsViewModel",
-          "dataProvider": "schools",
-          "collection": "Result",
-          "headerField": "Location",
-          "addItemForm": false,
-          "editItemForm": false,
-          "deleteItemButton": false,
-          "pullToRefresh": true,
-          "endlessScroll": false,
-          "isMapView": false,
-          "serverSideSortingField": "CreatedAt",
-          "serverSideSortingDirection": "asc",
-          "serverSidePaging": false,
-          "detailHeaderFieldSource": "dataBound",
-          "detailHeaderField": "Location"
-        }
-      ],
-      "title": "All Schools",
-      "addToNavigation": false
-    },
-    {
-      "type": "kendo-ui-mobile:view",
       "name": "lswhs",
       "components": [],
       "title": "LSWHS",
       "addToNavigation": false
-    },
-    {
-      "type": "kendo-ui-mobile:view",
-      "name": "powerSchool",
-      "components": [],
-      "title": "PowerSchool",
-      "addToNavigation": true,
-      "icon": "home"
-    },
-    {
-      "type": "kendo-ui-mobile:view",
-      "name": "transportation",
-      "components": [],
-      "title": "Transportation",
-      "addToNavigation": true,
-      "icon": "home"
-    },
-    {
-      "type": "kendo-ui-mobile:view",
-      "name": "lunch",
-      "components": [],
-      "title": "Lunch",
-      "addToNavigation": true,
-      "icon": "trash"
     },
     {
       "type": "kendo-ui-mobile:view",

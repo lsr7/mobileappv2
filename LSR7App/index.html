@@ -27,11 +27,7 @@
     <script src="components/middleschoolsview/index.js"></script>
     <script src="components/elementaryschoolsview/index.js"></script>
     <script src="components/settingsView/index.js"></script>
-    <script src="components/lunch/index.js"></script>
-    <script src="components/transportation/index.js"></script>
-    <script src="components/powerSchool/index.js"></script>
     <script src="components/lswhs/index.js"></script>
-    <script src="components/allschoolsView/index.js"></script>
     <script src="components/allBuildingsView/index.js"></script>
     <script src="components/homeView/index.js"></script>
     <div data-role="layout" data-id="main">
@@ -50,6 +46,16 @@
             </div>
         </header>
     </div>
+
+    <div id="appDrawer" data-role="drawer" data-title="Navigation">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <ul id="navigation-container" data-role="listview">
+        </ul>
+    </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <div id="appDrawer" data-role="drawer" data-title="Navigation">
         <header data-role="header">
@@ -59,10 +65,10 @@
         </header>
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
-            <li><a href="components/allBuildingsView/view.html" data-icon="edit">All Buildings</a></li>
-            <li><a id="openExternalInAppBrowser" data-icon="home">PowerSchool</a></li>
-            <li><a id="openExternalInAppBrowser2"><i class="fa fa-bus"></i> Transportation</a></li>
-            <li><a href="components/lunch/view.html"><i class="fa fa-cutlery"></i> Lunch</a></li>
+            <li><a href="components/allBuildingsView/view.html" data-icon="edit" class="jumpoutside">All Buildings</a></li>
+            <li><a href="#" onclick="app.openLink('https://powerschool.lsr7.org/');" data-icon="home">PowerSchool</a></li>
+            <li><a href="#" onclick="app.openLink('http://www.infofinderi.com/tfi/address.aspx?cid=LSRS13J5TQSE7/');"><i class="fa fa-bus"></i> Transportation</a></li>
+            <li><a href="#" onclick="app.openLink('http://leessummitschoolnutrition.com/?page=menus');"><i class="fa fa-cutlery"></i> Lunch</a></li>
             <li><a href="components/settingsView/view.html"><i class="fa fa-cog"></i> Settings</a></li>
         </ul>
     </div>
