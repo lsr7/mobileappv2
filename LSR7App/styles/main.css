@@ -608,6 +608,7 @@
     font-family: 'Roboto Condensed';
     font-weight: 600
 }
-
-
+.km-flat .km-button {background:none; border-radius:none; border:none}
+.km-flat .km-button .fa {font-size:1.4em}
+header .km-button .km-icon  {font-size:1.3em}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
