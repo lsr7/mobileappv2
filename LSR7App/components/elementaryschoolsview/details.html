@@ -34,19 +34,19 @@
 
             <div data-role="tabstrip" class="tab_schools">
                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phone-e" href="#actionsheet">Call</a></button>
-                <ul id="actionsheet" data-role="actionsheet" class="schools_calling"  data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }"="">
+                <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }"="">
                     <li>
-                        <a onclick="onCallMain_ELEM()">
+                        <a data-action="onCallMain_ELEM">
                 Call Main Office
             </a>
                     </li>
-                    <li >
-                        <a onclick="onCallAttendance_ELEM()">
+                    <li>
+                        <a data-action="onCallAttendance_ELEM">
                 Call Attendance Office
             </a>
                     </li>
                     <li>
-                        <a onclick="onCallCounseling_ELEM()">
+                        <a data-action="onCallCounseling_ELEM">
                 Call Counseling Center
             </a>
                     </li>
