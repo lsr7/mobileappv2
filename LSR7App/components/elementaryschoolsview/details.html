@@ -1,11 +1,19 @@
 <div data-role="view" data-title="Details" data-model="app.elementaryschoolsview.elementaryschoolsviewModel" data-bind="events: { show: detailsShow }" id="elementaryschoolsviewModelDetailsView">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
-            <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a>
+            <a data-role="backbutton" data-align="left">Back</a>
             <span data-bind="text: currentItem['Location']"></span>
         </div>
     </header>
 
+    <div class="details-content">
+        <div class="km-listview-wrapper">
+            <ul class="km-listview km-list km-listinset details-fields">
+
+
+            </ul>
+        </div>
+    </div>
     <!-- START_CUSTOM_CODE_elementaryschoolsviewModel -->
 
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
@@ -51,7 +59,7 @@
                 </button>
                 <button class="schoolButton">
 
-                  <a onclick="go_Website()"  class="fa" data-icon="website">
+                    <a onclick="go_Website()" class="fa" data-icon="website">
                 Website</a>
                 </button>
             </div>
@@ -61,30 +69,29 @@
             <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name"></h3>
             <h5 class="AdminImgH5">Principal</h5>
         </div>
-  <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
-   <input type="hidden" id="Main_Phone" data-bind="value: currentItem.Main_Phone">      
-      <input type="hidden" id="Attendance_Phone" data-bind="value: currentItem.Attendance_Phone">
-      <input type="hidden" id="Counseling_Phone" data-bind="value: currentItem.Counseling_Phone">        
-        
+        <input type="hidden" id="Building_Website" data-bind="value: currentItem.Building_Website">
+        <input type="hidden" id="Main_Phone" data-bind="value: currentItem.Main_Phone">
+        <input type="hidden" id="Attendance_Phone" data-bind="value: currentItem.Attendance_Phone">
+        <input type="hidden" id="Counseling_Phone" data-bind="value: currentItem.Counseling_Phone">
+
         <script>
-               function go_Website() {
-               var go_web = document.getElementById('Building_Website').value;
-     window.open(go_web, '_blank');
+            function go_Website() {
+                var go_web = document.getElementById('Building_Website').value;
+                window.open(go_web, '_blank');
             }
-       
 
             function onCallMain_ELEM() {
-             var mainphone = document.getElementById('Main_Phone').value;
+                var mainphone = document.getElementById('Main_Phone').value;
                 document.location.href = 'tel:' + mainphone;
             }
 
             function onCallAttendance_ELEM() {
-            var attendancephone = document.getElementById('Attendance_Phone').value;
+                var attendancephone = document.getElementById('Attendance_Phone').value;
                 document.location.href = 'tel:' + attendancephone;
             }
 
             function onCallCounseling_ELEM() {
-                       var counselingphone = document.getElementById('Counseling_Phone').value;     
+                var counselingphone = document.getElementById('Counseling_Phone').value;
                 document.location.href = 'tel:' + counselingphone;
             }
         </script>

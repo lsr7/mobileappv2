@@ -608,7 +608,32 @@
     font-family: 'Roboto Condensed';
     font-weight: 600
 }
-.km-flat .km-button {background:none; border-radius:none; border:none}
-.km-flat .km-button .fa {font-size:1.4em}
-header .km-button .km-icon  {font-size:1.3em}
+
+.km-flat .km-button {
+    background: none;
+    border-radius: none;
+    border: none
+}
+
+.km-flat .km-button .fa {
+    font-size: 1.4em
+}
+
+header .km-button .km-icon {
+    font-size: 1.3em
+}
+
+.lunchButton {
+    color: white; background-color: #4D8CAC; border: none; padding: 10px; font-size: 1rem;
+}
+
+.lunchDiv {margin-top: 10px;}
+
+.socialMediaIcons {
+ font-size: 2em!important;
+}  
+    
+#navigation-container > li.socialMediaIcons > a:nth-child(1) > i {color: #3765A3;}
+
+#navigation-container > li.socialMediaIcons > a:nth-child(2) > i {color: #7EC6F6}
 /* END_CUSTOM_CODE_kendoUiMobileApp */

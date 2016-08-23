@@ -26,6 +26,14 @@
     },
     {
       "type": "kendo-ui-mobile:view",
+      "name": "lunch",
+      "components": [],
+      "title": "Lunch",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
       "name": "settingsView",
       "components": [],
       "title": "Settings",
