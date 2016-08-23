@@ -246,6 +246,7 @@
     text-align: center;
     display: block;
     order: 1;
+   	font-size: 1.57em;
 }
 
 #kendoUiMobileApp.km-flat .km-header .km-rightitem {
