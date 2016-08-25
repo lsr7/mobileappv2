@@ -470,7 +470,7 @@
 
 #kendoUiMobileApp .km-header .km-view-title {
     color: white;
-    margin-left: -50px
+    text-align:left;
 }
 
 .km-drawer-button {
