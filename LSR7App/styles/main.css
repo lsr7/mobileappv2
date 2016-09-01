@@ -506,7 +506,7 @@
 
 .schools_hr {
     margin: 0 10px;
-    border-color: rgb(171, 208, 239);
+    border-color: rgb(000, 000, 000);
 }
 
 .schools_calling li a .km-icon {
@@ -553,7 +553,7 @@
 
 .schoolButton {
     border: none;
-    background-color: rgb(77, 140, 172);
+    padding:0;
     margin: 10px;
 }
 
@@ -565,7 +565,8 @@
     font-size: 1rem
 }
 
-
+.km-flat .km-state-active[style*=background] {    -webkit-box-shadow:none;
+    box-shadow:none;}
 /*Font Awesome Icons*/
 
 .fa .km-icon:after,
@@ -595,6 +596,14 @@
 .km-map:before {
     font-size: 1.5rem;
     content: "\F041";
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 4px!important;
+}
+.km-phonelsr7:after,
+.km-phonelsr7:before {
+    font-size: 1.5rem;
+    content: "\F095";
     text-align: center;
     margin-top: 2px;
     margin-bottom: 4px!important;
@@ -637,7 +646,7 @@ header .km-button .km-icon {
 .socialMediaIcons {
  font-size: 2em!important;
 }  
-    
+.menu-title {margin-left:15px}
 #navigation-container > li.socialMediaIcons > a:nth-child(1) > i {color: #3765A3;}
 
 #navigation-container > li.socialMediaIcons > a:nth-child(2) > i {color: #7EC6F6;}
