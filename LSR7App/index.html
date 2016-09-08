@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
+    <link href="styles/overrides.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="app.js"></script>
+    <script src="dataProviders/jsonDataProvider.js"></script>
+    <script src="dataProviders/jsonDataProvider1.js"></script>
+    <script src="dataProviders/jsonDataProvider2.js"></script>
+    <script src="dataProviders/jsonDataProvider3.js"></script>
+</head>
+
+<body id="kendoUiMobileApp">
+    <script src="components/otherbuildingsview/index.js"></script>
+    <script src="components/highschoolsview/index.js"></script>
+    <script src="components/middleschoolsview/index.js"></script>
+    <script src="components/elementaryschoolsview/index.js"></script>
+    <script src="components/settingsView/index.js"></script>
+    <script src="components/lunch/index.js"></script>
+    <script src="components/lswhs/index.js"></script>
+    <script src="components/allBuildingsView/index.js"></script>
+    <script src="components/homeView/index.js"></script>
+    <div data-role="layout" data-id="main">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
+            </div>
+        </header>
+    </div>
+
+    <div data-role="layout" data-id="main-nonav">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+    </div>
+
+    <div id="appDrawer" data-role="drawer" data-title="Menu">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" class="menu-title"></span>
+            </div>
+        </header>
+        <ul id="navigation-container" data-role="listview">
+        </ul>
+    </div>
+    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+    <div id="appDrawer" data-role="drawer" data-title="Menu">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" class="menu-title"></span>
+            </div>
+        </header>
+        <ul id="navigation-container" data-role="listview">
+            <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
+            <li><a href="components/allBuildingsView/view.html"><i class="fa fa-university" style="margin-left:-3px"></i> All Buildings</a></li>
+            <li><a onclick="window.open('https://powerschool.lsr7.org', '_blank')"><img src="img/powerschool-icon-2-1.png" style="width:7%" align="middle"> PowerSchool</a></li>
+            <li><a onclick="window.open('http://www.infofinderi.com/ifi/?cid=L', '_blank')"><i class="fa fa-bus"></i> Transportation</a></li>
+            <li><a href="components/lunch/view.html"><i class="fa fa-cutlery"></i> Lunch</a></li>
+            <li><a href="components/settingsView/view.html" data-icon="settings">Settings</a></li>
+            <li class="socialMediaIcons"><a onclick="window.open('https://www.facebook.com/LSR7Schools/', '_blank')"><i class="fa fa-facebook-square"></i></a><a onclick="window.open('https://twitter.com/LSR7?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&scrlybrkr=66ed0bd3', '_blank')"><i class="fa fa-twitter-square" style="margin-left: 5px;"></i></a></li>
+        </ul>
+    </div>
+
+    <div data-role="layout" data-id="mainwithback">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton" data-icon="goback-e"></a>
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+            </div>
+        </header>
+    </div>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+
+
+    <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+</body>
+
+</html>
