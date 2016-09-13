@@ -1,18 +1,35 @@
 <div data-role="view" data-title="Lunch" data-layout="main" data-model="app.lunch" data-show="app.lunch.onShow" data-after-show="app.lunch.afterShow">
     <!-- START_CUSTOM_CODE_lunch -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-         <img src="img/Nutrition.JPG" width="100%"/>
+      
+             <img src="img/Nutrition.JPG" width="100%"/>
 
 	<div class="lunchDiv">
  
     <ul class="lunchList">
         <li class="lunchLi" style="margin-top: 5%;"><button class="lunchButton"><a onclick="window.open('http://leessummitschoolnutrition.com/?page=main', '_blank')">LSR7 Nutrition</a></button></li>
         <li class="lunchLi"><button class="lunchButton"><a onclick="window.open('https://www.myschoolbucks.com/ver2/login/getmain', '_blank')">MySchoolBucks</a></button></li>
-        <li class="lunchLi"><button class="lunchButton"><a onclick="window.open('http://leessummitschoolnutrition.com/index.php?sid=2006131542515836&page=menus', '_blank')">Lunch Menus</a></button></li>
+        <li class="lunchLi"><button class="lunchButton"> <a data-role="button" data-rel="actionsheet" href="#actionsheet2">Lunch Menus</a></button></li>
     </ul>
         
-
- </div>    
+        
+                <ul id="actionsheet2" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }"="">
+                    <li>
+ 						<a onclick="window.open('lunchImg/elemSept.png', '_blank')";>
+                Elementary Schools
+            </a>
+                    </li>
+                    <li>
+                        <a onclick="window.open('lunchImg/midSept.png', '_blank')";>
+                Middle Schools
+            </a>
+                    </li>
+                    <li>
+                        <a onclick="window.open('lunchImg/highSept.png', '_blank')";>
+                High Schools
+            </a>
+                    </li>
+                </ul>
+ </div> 
     <!-- END_CUSTOM_CODE_lunch -->
 </div>

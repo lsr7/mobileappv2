@@ -21,8 +21,8 @@
 
 
             <div data-role="tabstrip" class="tab_schools">
-                <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phone-e" href="#actionsheet">Call</a></button>
-                <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }"="">
+                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phonelsr7" class="fa" href="#actionsheet" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
+                <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
                     <li>
                         <a data-action="onCallMain_MID">
                 Call Main Office
@@ -43,18 +43,17 @@
                 </ul>
 
                 <button class="schoolButton" v>
-                    <a href="" data-icon="map" class="fa" data-rel="external">Map</a>
-                </button>
+                    <a href="" data-icon="map" class="fa" data-rel="external" data-bind="style: { background:currentItem.Building_BackgroundColor}">Map</a>                </button>
                 <button class="schoolButton">
 
-                    <a onclick="go_Website_MID()" class="fa" data-icon="website">
+                    <a onclick="go_Website_MID()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 Website</a>
                 </button>
             </div>
             <hr class="schools_hr">
             <img data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
 
-            <h3 class="AdminImgH3" data-bind="text: currentItem.Principal_Name"></h3>
+            <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
             <h5 class="AdminImgH5">Principal</h5>
         </div>
         <input type="hidden" id="Building_Website_MID" data-bind="value: currentItem.Building_Website">
