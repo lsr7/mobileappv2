@@ -634,7 +634,7 @@ header .km-button .km-icon {
 }
 
 .lunchButton {
-    color: white; background-color: #4D8CAC; border: none; padding: 10px; font-size: 2rem; width: 100%;
+    color: white; background-color: #4D8CAC; border: none; padding: 10px; font-size: 2rem; width: 100%; height: 20%;
 }
 
 .lunchList {list-style-type: none; text-align: center; margin-left: 0; padding-left: 0;}
@@ -662,4 +662,6 @@ header .km-button .km-icon {
 }
 
 i.fa.fa-bars {margin-left: -13px;}
+
+#titleBar {background-color: #4D8CAC!important;}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
