@@ -60,18 +60,17 @@
     </div>
 
          
-        <input type="hidden"  data-bind="value: currentItem.Building_BackgroundColorNumber">      
+        <input type="hidden" id="buildbgcolorHIGH"  data-bind="value: currentItem.Building_BackgroundColorNumber">      
         <input type="hidden" id="Building_Website_HIGH" data-bind="value: currentItem.Building_Website">
         <input type="hidden" id="Main_Phone_HIGH" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_HIGH" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_HIGH" data-bind="value: currentItem.Counseling_Phone">
     
         <script>
-               var navbarcolor_temp = document.getElementById("buildbgcolorHIGH").value;
-            alert(navbarcolor_temp);
-              document.getElementById("navbarcolor").style.backgroundColor ='#'+navbarcolor_temp;          
-            
-            
+         	$(document).ready(function() {  
+    var headerbackgroundcolor = $('#buildbgcolorHIGH').val();
+            document.getElementById("navbarcolor").style.backgroundColor ='#'+headerbackgroundcolor;
+            });
             function go_Website_HIGH() {
                 var go_web = document.getElementById('Building_Website_HIGH').value;
                 window.open(go_web, '_blank');
@@ -92,7 +91,7 @@
                 document.location.href = 'tel:' + counselingphone;
             }
         
-do_navbarcolor();
+
         </script>
 
 
