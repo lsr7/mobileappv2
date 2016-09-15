@@ -51,14 +51,15 @@
         <input type="hidden" id="Attendance_Phone_ELEM" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_ELEM" data-bind="value: currentItem.Counseling_Phone">
         <script>
+          
             function go_Website_ELEM() {
                 var go_web = document.getElementById('Building_Website_ELEM').value;
                 window.open(go_web, '_blank');
             }
 
             function onCallMain_ELEM() {
-                var mainphone = document.getElementById('Main_Phone_ELEM').value;
-                document.location.href = 'tel:' + mainphone;
+                var mainphone_ELEM = document.getElementById('Main_Phone_ELEM').value;
+                document.location.href = 'tel:' + mainphone_ELEM;
             }
 
             function onCallAttendance_ELEM() {
