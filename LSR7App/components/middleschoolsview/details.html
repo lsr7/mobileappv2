@@ -54,7 +54,7 @@
             <img data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
 
             <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
-            <h5 class="AdminImgH5">Principal</h5>
+            <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
         </div>
         <input type="hidden" id="Building_Website_MID" data-bind="value: currentItem.Building_Website">
         <input type="hidden" id="Main_Phone_MID" data-bind="value: currentItem.Main_Phone">
