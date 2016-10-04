@@ -74,35 +74,6 @@
                 document.location.href = 'tel:' + counselingphone;
             }
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-	navigator.splashscreen.hide();
-	deviceTest = new deviceTest();
-	deviceTest.run();
-}
-
-function deviceTest() {
-};
-
-            deviceTest.prototype = {
-    
-	run:function() {
-		var that = this;
-		document.getElementById("devicePlatform").addEventListener("click", function() {
-			that._viewDevicePlatform.apply(that, arguments);
-		});
-	},
-	_viewDevicePlatform : function () {
-	    var result = document.getElementById("test");
-         var Map_ELEM = document.getElementById('Map_ELEM').value;
-		if (result = 'iOS') {
-        window.location.href='http://maps.apple.com/?daddr=' + Map_ELEM;
-        } else {
-        window.location.href='geo://0,0?q=' + Map_ELEM;
-        }
-	},
-}
         </script>
     </div>
     <!-- END_CUSTOM_CODE_elementaryschoolsviewModel -->
