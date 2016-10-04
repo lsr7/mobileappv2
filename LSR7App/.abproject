@@ -48,5 +48,8 @@
       "API_URL": "https://platform.telerik.com/feedback/api/v1",
       "ENABLE_SHAKE": "True"
     }
-  }
+  },
+  "CorePlugins": [
+    "com.telerik.feedback@2.0.3.0"
+  ]
 }
