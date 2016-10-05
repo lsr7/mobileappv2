@@ -33,7 +33,12 @@
             </a>
                     </li>
                 </ul>
-                 <button id="devicePlatform">Device platform</button>
+           
+                <button class="schoolButton">
+
+                    <a  onclick="go_map_ELEM()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                Map</a>
+                </button>            
                
                 <button class="schoolButton">
 
@@ -50,10 +55,15 @@
         <input type="hidden" id="Main_Phone_ELEM" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_ELEM" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_ELEM" data-bind="value: currentItem.Counseling_Phone">
-                <input type="hidden" id="Map_ELEM" data-bind="value: currentItem.Map_iOS">
+                <input type="hidden" id="Map_ELEM"  data-bind="value: currentItem.Map_iOS">
 
         <script>
-          
+           function go_map_ELEM() {
+                var go_map = 'geo:' + document.getElementById('Map_ELEM').value;
+                 app.openLink(go_map);
+            }
+
+
             function go_Website_ELEM() {
                 var go_web = document.getElementById('Building_Website_ELEM').value;
                 window.open(go_web, '_blank');
@@ -73,6 +83,7 @@
                 var counselingphone = document.getElementById('Counseling_Phone_ELEM').value;
                 document.location.href = 'tel:' + counselingphone;
             }
+
 
         </script>
     </div>

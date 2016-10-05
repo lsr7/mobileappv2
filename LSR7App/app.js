@@ -57,7 +57,7 @@
 
     app.openLink = function(url) {
         if (url.substring(0, 4) === 'geo:' && device.platform === 'iOS') {
-            url = 'http://maps.apple.com/?ll=' + url.substring(4, url.length);
+            url = 'http://maps.apple.com/?daddr=' + url.substring(4, url.length);
         }
 
         window.open(url, '_system');
