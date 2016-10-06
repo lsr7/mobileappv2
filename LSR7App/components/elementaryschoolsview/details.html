@@ -1,0 +1,91 @@
+<div data-role="view" data-title="Details" data-model="app.elementaryschoolsview.elementaryschoolsviewModel" data-bind="events: { show: detailsShow }" id="elementaryschoolsviewModelDetailsView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
+            <span data-bind="text: currentItem['Location']"></span>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_elementaryschoolsviewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <div class="details-content">
+        <div class="schools">
+                <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%;">
+             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
+                <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
+            </div>
+            <div data-role="tabstrip" class="tab_schools">
+  <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phonelsr7" class="fa" href="#actionsheet" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
+                <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
+                    <li>
+                        <a data-action="onCallMain_ELEM">
+                Call Main Office
+            </a>
+                    </li>
+                    <li>
+                        <a data-action="onCallAttendance_ELEM">
+                Call Attendance Office
+            </a>
+                    </li>
+                    <li>
+                        <a data-action="onCallCounseling_ELEM">
+                Call Counseling Center
+            </a>
+                    </li>
+                </ul>
+           
+                <button class="schoolButton">
+
+                    <a  onclick="go_map_ELEM()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                Map</a>
+                </button>            
+               
+                <button class="schoolButton">
+
+                    <a onclick="go_Website_ELEM()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                Website</a>
+                </button>
+            </div>
+            <hr class="schools_hr">
+            <img data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
+            <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
+            <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
+        </div>
+        <input type="hidden" id="Building_Website_ELEM" data-bind="value: currentItem.Building_Website">
+        <input type="hidden" id="Main_Phone_ELEM" data-bind="value: currentItem.Main_Phone">
+        <input type="hidden" id="Attendance_Phone_ELEM" data-bind="value: currentItem.Attendance_Phone">
+        <input type="hidden" id="Counseling_Phone_ELEM" data-bind="value: currentItem.Counseling_Phone">
+                <input type="hidden" id="Map_ELEM"  data-bind="value: currentItem.Map_iOS">
+
+        <script>
+           function go_map_ELEM() {
+                var go_map = 'geo:' + document.getElementById('Map_ELEM').value;
+                 app.openLink(go_map);
+            }
+
+
+            function go_Website_ELEM() {
+                var go_web = document.getElementById('Building_Website_ELEM').value;
+                window.open(go_web, '_blank');
+            }
+
+            function onCallMain_ELEM() {
+                var mainphone_ELEM = document.getElementById('Main_Phone_ELEM').value;
+                document.location.href = 'tel:' + mainphone_ELEM;
+            }
+
+            function onCallAttendance_ELEM() {
+                var attendancephone = document.getElementById('Attendance_Phone_ELEM').value;
+                document.location.href = 'tel:' + attendancephone;
+            }
+
+            function onCallCounseling_ELEM() {
+                var counselingphone = document.getElementById('Counseling_Phone_ELEM').value;
+                document.location.href = 'tel:' + counselingphone;
+            }
+
+
+        </script>
+    </div>
+    <!-- END_CUSTOM_CODE_elementaryschoolsviewModel -->
+</div>
