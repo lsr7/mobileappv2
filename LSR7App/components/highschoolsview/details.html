@@ -43,7 +43,9 @@
                 </ul>
 
                 <button class="schoolButton">
-                    <a href="" data-icon="map" class="fa" data-rel="external" data-bind="style: { background:currentItem.Building_BackgroundColor}">Map</a>
+
+                    <a  onclick="go_map_HIGH()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                Map</a>
                 </button>
                 <button class="schoolButton">
 
@@ -65,12 +67,20 @@
         <input type="hidden" id="Main_Phone_HIGH" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_HIGH" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_HIGH" data-bind="value: currentItem.Counseling_Phone">
-    
+        <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
+
         <script>
-         	$(document).ready(function() {  
-    var headerbackgroundcolor = $('#buildbgcolorHIGH').val();
-            document.getElementById("navbarcolor").style.backgroundColor ='#'+headerbackgroundcolor;
-            });
+
+         	function go_map_HIGH() {
+                var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
+                 app.openLink(go_map);
+            }
+
+            function go_map_HIGH() {
+                var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
+                 app.openLink(go_map);
+            }
+
             function go_Website_HIGH() {
                 var go_web = document.getElementById('Building_Website_HIGH').value;
                 window.open(go_web, '_blank');

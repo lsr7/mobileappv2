@@ -59,6 +59,10 @@
         if (url.substring(0, 4) === 'geo:' && device.platform === 'iOS') {
             url = 'http://maps.apple.com/?daddr=' + url.substring(4, url.length);
         }
+         if (url.substring(0, 4) === 'geo:' && device.platform === 'Android') {
+            url = 'geo://0,0?q=' + url.substring(4, url.length);
+    
+        }
 
         window.open(url, '_system');
         if (window.event) {

@@ -45,8 +45,11 @@
 
                 </ul>
 
-                <button class="schoolButton" v>
-                    <a href="" data-icon="map" class="fa" data-rel="external" data-bind="style: { background:currentItem.Building_BackgroundColor}">Map</a>                </button>
+                <button class="schoolButton">
+
+                    <a  onclick="go_map_OTHER()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                Map</a>
+                </button> 
                 <button class="schoolButton">
 
                     <a onclick="go_Website_OTHER()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}">
@@ -63,8 +66,16 @@
         <input type="hidden" id="Main_Phone_OTHER" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_OTHER" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_OTHER" data-bind="value: currentItem.Counseling_Phone">
+                <input type="hidden" id="Map_OTHER"  data-bind="value: currentItem.Map_Links">
+
 
         <script>
+
+function go_map_OTHER() {
+                var go_map = 'geo:' + document.getElementById('Map_OTHER').value;
+                 app.openLink(go_map);
+            }
+
             function go_Website_OTHER() {
                 var go_web = document.getElementById('Building_Website_OTHER').value;
                 window.open(go_web, '_blank');
