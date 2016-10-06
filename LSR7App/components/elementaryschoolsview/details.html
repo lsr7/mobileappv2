@@ -33,8 +33,8 @@
             </a>
                     </li>
                 </ul>
-                 <button id="devicePlatform">Device platform</button>
-               
+                <button class="schoolButton">
+                    <a href="" data-icon="map" class="fa" data-rel="external" data-bind="style: { background:currentItem.Building_BackgroundColor}">Map</a>                </button>
                 <button class="schoolButton">
 
                     <a onclick="go_Website_ELEM()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}">
@@ -50,8 +50,6 @@
         <input type="hidden" id="Main_Phone_ELEM" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_ELEM" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_ELEM" data-bind="value: currentItem.Counseling_Phone">
-                <input type="hidden" id="Map_ELEM" data-bind="value: currentItem.Map_iOS">
-
         <script>
           
             function go_Website_ELEM() {
@@ -73,36 +71,6 @@
                 var counselingphone = document.getElementById('Counseling_Phone_ELEM').value;
                 document.location.href = 'tel:' + counselingphone;
             }
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-	navigator.splashscreen.hide();
-	deviceTest = new deviceTest();
-	deviceTest.run();
-}
-
-function deviceTest() {
-};
-
-            deviceTest.prototype = {
-    
-	run:function() {
-		var that = this;
-		document.getElementById("devicePlatform").addEventListener("click", function() {
-			that._viewDevicePlatform.apply(that, arguments);
-		});
-	},
-	_viewDevicePlatform : function () {
-	    var result = document.getElementById("test");
-         var Map_ELEM = document.getElementById('Map_ELEM').value;
-		if (result = 'iOS') {
-        window.location.href='http://maps.apple.com/?daddr=' + Map_ELEM;
-        } else {
-        window.location.href='geo://0,0?q=' + Map_ELEM;
-        }
-	},
-}
         </script>
     </div>
     <!-- END_CUSTOM_CODE_elementaryschoolsviewModel -->
