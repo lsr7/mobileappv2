@@ -1,6 +1,6 @@
 <div data-role="view" data-title="Details" data-model="app.middleschoolsview.middleschoolsviewModel" data-bind="events: { show: detailsShow }" id="middleschoolsviewModelDetailsView">
     <header data-role="header">
-        <div data-role="navbar" class="header-text">
+        <div data-role="navbar" id="nav" class="header-text">
           <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
             <span data-bind="text: currentItem['Location']"></span>
         </div>
@@ -13,16 +13,16 @@
 
 
         <div class="schools">
-                <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
-             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                <img  data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
+             <div class="header-text" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
                 <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
             </div>
 
 
             <div data-role="tabstrip" class="tab_schools">
-                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phonelsr7" class="fa" href="#actionsheet" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
-                <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
+                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheetM" data-icon="phonelsr7" class="fa" href="#actionsheetM" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
+                <ul id="actionsheetM" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
                     <li>
                         <a data-action="onCallMain_MID">
                 Call Main Office
@@ -54,12 +54,13 @@
                 </button>
             </div>
             <hr class="schools_hr">
-            <img data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
+            <img id="img" data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
 
             <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
             <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
         </div>
         <input type="hidden" id="Building_Website_MID" data-bind="value: currentItem.Building_Website">
+        <input type="hidden"  onchange="getColor()" id="BG" data-bind="value: currentItem.Building_BackgroundColor">
         <input type="hidden" id="Main_Phone_MID" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_MID" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_MID" data-bind="value: currentItem.Counseling_Phone">
@@ -67,7 +68,15 @@
 
         <script>
 
+  
+        var navbar = $("#nav");
+        $("#img").on('load', function(){
+navbar.css('background', ''+$('#BG').val()+'');
+        });
+
+        
 function go_map_MID() {
+    
                 var go_map = 'geo:' + document.getElementById('Map_MID').value;
                  app.openLink(go_map);
             }
@@ -77,7 +86,7 @@ function go_map_MID() {
                 window.open(go_web, '_blank');
             }
 
-            function onCallMain_MID() {
+            function onCallMain_MID() {  
                 var mainphone = document.getElementById('Main_Phone_MID').value;
                 document.location.href = 'tel:' + mainphone;
             }
