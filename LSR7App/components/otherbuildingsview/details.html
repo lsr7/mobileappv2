@@ -1,14 +1,22 @@
-<div data-role="view" data-title="Details" data-model="app.otherbuildingsview.otherbuildingsviewModel" data-bind="events: { show: detailsShow }" id="otherbuildingsviewModelDetailsView">
+<div data-role="view" data-title="Details" data-model="app.otherbuildingsview.otherbuildingsviewModel" data-bind="events: { show: detailsShow }" id="otherbuildingsviewModelScreen" class="screen screen--detail">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
-          <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
+            <a data-role="backbutton" data-align="left">Back</a>
             <span data-bind="text: currentItem['Location']"></span>
         </div>
     </header>
 
+    <div class="details-content screen__content screen__content--details">
+        <div class="km-listview-wrapper">
+            <ul class="km-listview km-list km-listinset details-fields">
+
+
+            </ul>
+        </div>
+    </div>
     <!-- START_CUSTOM_CODE_otherbuildingsviewModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-   <div class="details-content">
+    <div class="details-content">
 
 
         <div class="schools">
@@ -17,14 +25,14 @@
             <div>
                 <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
             </div>
-             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+            <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
                 <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
             </div>
 
 
             <div data-role="tabstrip" class="tab_schools">
-                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phonelsr7" class="fa" href="#actionsheet" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
+                <button class="schoolButton"> <a data-role="button" data-rel="actionsheet" data-icon="phonelsr7" class="fa" href="#actionsheet" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
                 <ul id="actionsheet" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
                     <li>
                         <a data-action="onCallMain_OTHER">
@@ -47,9 +55,9 @@
 
                 <button class="schoolButton">
 
-                    <a  onclick="go_map_OTHER()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                    <a onclick="go_map_OTHER()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 Map</a>
-                </button> 
+                </button>
                 <button class="schoolButton">
 
                     <a onclick="go_Website_OTHER()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}">
@@ -66,14 +74,13 @@
         <input type="hidden" id="Main_Phone_OTHER" data-bind="value: currentItem.Main_Phone">
         <input type="hidden" id="Attendance_Phone_OTHER" data-bind="value: currentItem.Attendance_Phone">
         <input type="hidden" id="Counseling_Phone_OTHER" data-bind="value: currentItem.Counseling_Phone">
-                <input type="hidden" id="Map_OTHER"  data-bind="value: currentItem.Map_Links">
+        <input type="hidden" id="Map_OTHER" data-bind="value: currentItem.Map_Links">
 
 
         <script>
-
-function go_map_OTHER() {
+            function go_map_OTHER() {
                 var go_map = 'geo:' + document.getElementById('Map_OTHER').value;
-                 app.openLink(go_map);
+                app.openLink(go_map);
             }
 
             function go_Website_OTHER() {

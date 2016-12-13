@@ -1,9 +1,19 @@
-<div data-role="view" data-title="Other Buildings" data-layout="main-nonav" data-model="app.otherbuildingsview" data-show="app.otherbuildingsview.onShow" data-after-show="app.otherbuildingsview.afterShow">
+<div data-role="view" data-title="View" data-layout="main-nonav" data-model="app.otherbuildingsview" data-show="app.otherbuildingsview.onShow" data-after-show="app.otherbuildingsview.afterShow" id="otherbuildingsviewScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.otherbuildingsview.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
 
     <!-- START_CUSTOM_CODE_otherbuildingsview -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
-     <header data-role="header">
+    <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
             <span data-role="view-title"></span>
@@ -25,5 +35,22 @@
 
         </div>
     </script>
-       <!-- END_CUSTOM_CODE_otherbuildingsview -->
+    <!-- END_CUSTOM_CODE_otherbuildingsview -->
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="otherbuildingsviewModelTemplate" data-bind="source: otherbuildingsviewModel.dataSource, events: {click: otherbuildingsviewModel.itemClick}" data-pull-to-refresh="false"
+    data-endless-scroll="false">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_otherbuildingsviewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_otherbuildingsviewModel -->
+    <script type="text/x-kendo-template" id="otherbuildingsviewModelTemplate">
+        <div class="image-with-text">
+            # data = app.otherbuildingsview.otherbuildingsviewModel.fixHierarchicalData(data); #
+
+            <h3>#: data['Building_Name'] #</h3>
+
+        </div>
+    </script>
 </div>

@@ -58,9 +58,11 @@
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
+          "deleteItemConfirmation": true,
           "pullToRefresh": false,
           "endlessScroll": false,
           "isMapView": false,
+          "serverSideSorting": true,
           "serverSideSortingField": "CreatedAt",
           "serverSideSortingDirection": "asc",
           "serverSidePaging": false,
@@ -89,9 +91,11 @@
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
+          "deleteItemConfirmation": true,
           "pullToRefresh": false,
           "endlessScroll": false,
           "isMapView": false,
+          "serverSideSorting": true,
           "serverSideSortingField": "CreatedAt",
           "serverSideSortingDirection": "asc",
           "serverSidePaging": false,
@@ -120,9 +124,11 @@
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
+          "deleteItemConfirmation": true,
           "pullToRefresh": false,
           "endlessScroll": false,
           "isMapView": false,
+          "serverSideSorting": true,
           "serverSideSortingField": "CreatedAt",
           "serverSideSortingDirection": "asc",
           "serverSidePaging": false,
@@ -151,9 +157,11 @@
           "addItemForm": false,
           "editItemForm": false,
           "deleteItemButton": false,
+          "deleteItemConfirmation": true,
           "pullToRefresh": false,
           "endlessScroll": false,
           "isMapView": false,
+          "serverSideSorting": true,
           "serverSideSortingField": "CreatedAt",
           "serverSideSortingDirection": "asc",
           "serverSidePaging": false,
@@ -169,30 +177,30 @@
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider",
-      "title": "Elementary Schools",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/elementary_schools.json"
+      "url": "https://www1.lsr7.org/mobile_app/elementary_schools.json",
+      "title": "Elementary Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider1",
-      "title": "Middle Schools",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/middle_schools.json"
+      "url": "https://www1.lsr7.org/mobile_app/middle_schools.json",
+      "title": "Middle Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider2",
-      "title": "High Schools",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/high_schools.json"
+      "url": "https://www1.lsr7.org/mobile_app/high_schools.json",
+      "title": "High Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider3",
-      "title": "Other Buildings",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/Other_schools.json"
+      "url": "https://www1.lsr7.org/mobile_app/Other_schools.json",
+      "title": "Other Buildings"
     }
   ],
   "name": "kendoUiMobileApp",

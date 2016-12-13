@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
     <meta charset="utf-8">
@@ -18,6 +19,7 @@
     <script src="dataProviders/jsonDataProvider2.js"></script>
     <script src="dataProviders/jsonDataProvider3.js"></script>
 </head>
+
 <body id="kendoUiMobileApp">
     <script src="components/otherbuildingsview/index.js"></script>
     <script src="components/highschoolsview/index.js"></script>
@@ -32,7 +34,7 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white; margin-left: 0;"></i></a>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
         </header>
     </div>
@@ -45,15 +47,25 @@
         </header>
     </div>
 
-    <div id="appDrawer" data-role="drawer" data-title="Menu" data-swipe-to-open="false">
+    <div id="appDrawer" data-role="drawer" data-title="Navigation">
         <header data-role="header">
             <div data-role="navbar">
-                <span data-role="view-title" class="menu-title"></span>
+                <span data-role="view-title"></span>
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
+            <li><a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a></li>
+            <li><a href="components/allBuildingsView/view.html" data-icon="edit"><span class="navigation-link-text" data-bind="text: strings.allBuildingsView.title"></span></a></li>
+            <li><a href="components/lunch/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.lunch.title"></span></a></li>
+            <li><a href="components/settingsView/view.html" data-icon="settings"><span class="navigation-link-text" data-bind="text: strings.settingsView.title"></span></a></li>
         </ul>
     </div>
+    <div id="notify" class="notify-pop-up">
+        <span class="notify-pop-up__content"></span>
+    </div>
+    <!--  start index html save -->
+    <!--  end index html save -->
+
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <div id="appDrawer" data-role="drawer" data-title="Menu">
         <header data-role="header">
@@ -64,11 +76,19 @@
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/homeView/view.html" data-icon="home">Home</a></li>
             <li><a href="components/allBuildingsView/view.html"><i class="fa fa-university" style="margin-left:-3px"></i> All Buildings</a></li>
-            <li><a onclick="window.open('https://powerschool.lsr7.org', '_blank')"><img src="img/powerschool-icon-2-1.png" style="width:6%" align="top"> PowerSchool</a></li>
+            <li>
+                <a onclick="window.open('https://powerschool.lsr7.org', '_blank')"><img src="img/powerschool-icon-2-1.png" style="width:6%" align="top"> PowerSchool</a>
+            </li>
             <li><a onclick="window.open('http://www.infofinderi.com/ifi/?cid=L', '_blank')"><i class="fa fa-bus"></i> Transportation</a></li>
             <li><a href="components/lunch/view.html"><i class="fa fa-cutlery"></i> Lunch</a></li>
             <li><a href="components/lswhs/view.html">Elementary Schools</a></li>
-            <li class="socialMediaIcons"><a onclick="window.open('https://www.facebook.com/LSR7Schools/', '_blank')"><i class="fa fa-facebook-square"></i></a><a onclick="window.open('https://twitter.com/LSR7?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&scrlybrkr=66ed0bd3', '_blank')"><i class="fa fa-twitter-square" style="margin-left: 5px;"></i></a></li>
+            <li class="socialMediaIcons"><a onclick="window.open('https://www.facebook.com/LSR7Schools/', '_blank')"><i class="fa fa-facebook-square"></i></a>
+                <a onclick="window.open('https://twitter.com/LSR7?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&scrlybrkr=66ed0bd3', '_blank')"><i class="fa fa-twitter-square" style="margin-left: 5px;"></i></a>
+            </li>
+            <li><a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a></li>
+            <li><a href="components/allBuildingsView/view.html" data-icon="edit"><span class="navigation-link-text" data-bind="text: strings.allBuildingsView.title"></span></a></li>
+            <li><a href="components/lunch/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.lunch.title"></span></a></li>
+            <li><a href="components/settingsView/view.html" data-icon="settings"><span class="navigation-link-text" data-bind="text: strings.settingsView.title"></span></a></li>
         </ul>
     </div>
 
