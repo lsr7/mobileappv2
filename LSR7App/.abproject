@@ -4,7 +4,7 @@
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.LSR7App",
   "DisplayName": "LSR7App",
-  "Author": "",
+  "Author": "Drake",
   "Description": "LSR7App",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -50,6 +50,6 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.feedback@2.0.3.0"
+    "com.telerik.feedback@2.0.4"
   ]
 }
