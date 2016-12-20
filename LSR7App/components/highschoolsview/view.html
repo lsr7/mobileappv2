@@ -1,19 +1,9 @@
-<div data-role="view" data-title="View" data-layout="main-nonav" data-model="app.highschoolsview" data-show="app.highschoolsview.onShow" data-after-show="app.highschoolsview.afterShow" id="highschoolsviewScreen" class="screen">
-    <header data-role="header">
-        <div data-role="navbar" class="header-text">
-
-            <span data-bind="text: strings.highschoolsview.title"></span>
-
-            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-
-        </div>
-    </header>
-
+<div data-role="view" data-title="High Schools" data-layout="main-nonav" data-model="app.highschoolsview" data-show="app.highschoolsview.onShow" data-after-show="app.highschoolsview.afterShow">
 
     <!-- START_CUSTOM_CODE_highschoolsview -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
-    <header data-role="header">
+     <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
             <span data-role="view-title"></span>
@@ -35,22 +25,5 @@
 
         </div>
     </script>
-    <!-- END_CUSTOM_CODE_highschoolsview -->
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="highschoolsviewModelTemplate" data-bind="source: highschoolsviewModel.dataSource, events: {click: highschoolsviewModel.itemClick}" data-pull-to-refresh="false"
-    data-endless-scroll="false">
-    </ul>
-
-
-    <!-- START_CUSTOM_CODE_highschoolsviewModel -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-    <!-- END_CUSTOM_CODE_highschoolsviewModel -->
-    <script type="text/x-kendo-template" id="highschoolsviewModelTemplate">
-        <div class="image-with-text">
-            # data = app.highschoolsview.highschoolsviewModel.fixHierarchicalData(data); #
-
-            <h3>#: data['Building_Name'] #</h3>
-
-        </div>
-    </script>
+        <!-- END_CUSTOM_CODE_highschoolsview -->
 </div>

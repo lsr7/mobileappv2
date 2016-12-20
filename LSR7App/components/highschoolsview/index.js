@@ -4,7 +4,6 @@ app.highschoolsview = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
-app.localization.registerView('highschoolsview');
 
 // START_CUSTOM_CODE_highschoolsview
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
@@ -12,18 +11,9 @@ app.localization.registerView('highschoolsview');
 // END_CUSTOM_CODE_highschoolsview
 (function(parent) {
     var dataProvider = app.data.jsonDataProvider2,
-        /// start global model properties
-        /// end global model properties
         fetchFilteredData = function(paramFilter, searchFilter) {
             var model = parent.get('highschoolsviewModel'),
-                dataSource;
-
-            if (model) {
                 dataSource = model.get('dataSource');
-            } else {
-                parent.set('highschoolsviewModel_delayedFetch', paramFilter || null);
-                return;
-            }
 
             if (paramFilter) {
                 model.set('paramFilter', paramFilter);
@@ -42,7 +32,15 @@ app.localization.registerView('highschoolsview');
                 dataSource.filter({});
             }
         },
+        processImage = function(img) {
 
+            if (!img) {
+                var empty1x1png = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQI12NgYAAAAAMAASDVlMcAAAAASUVORK5CYII=';
+                img = 'data:image/png;base64,' + empty1x1png;
+            }
+
+            return img;
+        },
         dataSourceOptions = {
             type: 'json',
             transport: {
@@ -53,13 +51,7 @@ app.localization.registerView('highschoolsview');
             error: function(e) {
 
                 if (e.xhr) {
-                    var errorText = "";
-                    try {
-                        errorText = JSON.stringify(e.xhr);
-                    } catch (jsonErr) {
-                        errorText = e.xhr.responseText || e.xhr.statusText || 'An error has occurred!';
-                    }
-                    alert(errorText);
+                    alert(JSON.stringify(e.xhr));
                 }
             },
             schema: {
@@ -80,10 +72,11 @@ app.localization.registerView('highschoolsview');
                 dir: 'asc'
             },
         },
-        /// start data sources
-        /// end data sources
+        dataSource = new kendo.data.DataSource(dataSourceOptions),
+        // start data sources
+        // end data sources
         highschoolsviewModel = kendo.observable({
-            _dataSourceOptions: dataSourceOptions,
+            dataSource: dataSource,
             fixHierarchicalData: function(data) {
                 var result = {},
                     layout = {};
@@ -108,10 +101,6 @@ app.localization.registerView('highschoolsview');
                 (function fix(source, layout) {
                     var i, j, name, srcObj, ltObj, type,
                         names = Object.getOwnPropertyNames(layout);
-
-                    if ($.type(source) !== 'object') {
-                        return;
-                    }
 
                     for (i = 0; i < names.length; i++) {
                         name = names[i];
@@ -142,14 +131,7 @@ app.localization.registerView('highschoolsview');
 
             },
             detailsShow: function(e) {
-                var uid = e.view.params.uid,
-                    dataSource = highschoolsviewModel.get('dataSource'),
-                    itemModel = dataSource.getByUid(uid);
-
-                highschoolsviewModel.setCurrentItemByUid(uid);
-
-                /// start detail form show
-                /// end detail form show
+                highschoolsviewModel.setCurrentItemByUid(e.view.params.uid);
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
@@ -160,9 +142,6 @@ app.localization.registerView('highschoolsview');
                     itemModel.Location = String.fromCharCode(160);
                 }
 
-                /// start detail form initialization
-                /// end detail form initialization
-
                 highschoolsviewModel.set('originalItem', itemModel);
                 highschoolsviewModel.set('currentItem',
                     highschoolsviewModel.fixHierarchicalData(itemModel));
@@ -172,23 +151,22 @@ app.localization.registerView('highschoolsview');
             linkBind: function(linkString) {
                 var linkChunks = linkString.split('|');
                 if (linkChunks[0].length === 0) {
-                    return this.get('currentItem.' + linkChunks[1]);
+                    return this.get("currentItem." + linkChunks[1]);
                 }
-                return linkChunks[0] + this.get('currentItem.' + linkChunks[1]);
+                return linkChunks[0] + this.get("currentItem." + linkChunks[1]);
             },
-            /// start masterDetails view model functions
-            /// end masterDetails view model functions
+            imageBind: function(imageField) {
+                if (imageField.indexOf("|") > -1) {
+                    return processImage(this.get("currentItem." + imageField.split("|")[0]));
+                }
+                return processImage(imageField);
+            },
             currentItem: {}
         });
 
     if (typeof dataProvider.sbProviderReady === 'function') {
         dataProvider.sbProviderReady(function dl_sbProviderReady() {
             parent.set('highschoolsviewModel', highschoolsviewModel);
-            var param = parent.get('highschoolsviewModel_delayedFetch');
-            if (typeof param !== 'undefined') {
-                parent.set('highschoolsviewModel_delayedFetch', undefined);
-                fetchFilteredData(param);
-            }
         });
     } else {
         parent.set('highschoolsviewModel', highschoolsviewModel);
@@ -197,9 +175,7 @@ app.localization.registerView('highschoolsview');
     parent.set('onShow', function(e) {
         var param = e.view.params.filter ? JSON.parse(e.view.params.filter) : null,
             isListmenu = false,
-            backbutton = e.view.element && e.view.element.find('header [data-role="navbar"] .backButtonWrapper'),
-            dataSourceOptions = highschoolsviewModel.get('_dataSourceOptions'),
-            dataSource;
+            backbutton = e.view.element && e.view.element.find('header [data-role="navbar"] .backButtonWrapper');
 
         if (param || isListmenu) {
             backbutton.show();
@@ -212,8 +188,6 @@ app.localization.registerView('highschoolsview');
             }
         }
 
-        dataSource = new kendo.data.DataSource(dataSourceOptions);
-        highschoolsviewModel.set('dataSource', dataSource);
         fetchFilteredData(param);
     });
 

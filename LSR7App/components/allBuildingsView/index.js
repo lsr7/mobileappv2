@@ -4,7 +4,6 @@ app.allBuildingsView = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
-app.localization.registerView('allBuildingsView');
 
 // START_CUSTOM_CODE_allBuildingsView
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes

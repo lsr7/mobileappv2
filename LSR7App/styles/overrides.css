@@ -348,15 +348,3 @@
   color: #be5138;
   text-align: center;
 }
-/* textblock specific styles */
-.km-flat .km-label-hidden .textBlock,
-.km-flat .km-label-above .textBlock {
-  display: block;
-  color: #4c5356;
-  width: auto;
-  word-wrap: break-word;
-}
-/*Image Gallery field*/
-.km-flat .field--gallery:not(.field--gallery-slider) .field__content .gallery__items:after {
-  background: rgba(0, 0, 0, 0.1);
-}
