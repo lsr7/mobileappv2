@@ -201,9 +201,9 @@
 
 // START_CUSTOM_CODE_kendoUiMobileApp
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {
-    window.open = cordova.InAppBrowser.open;
-}
+//function onDeviceReady() {
+//    window.open = cordova.InAppBrowser.open;
+//}
 // END_CUSTOM_CODE_kendoUiMobileApp
