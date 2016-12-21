@@ -71,19 +71,6 @@
 
         <script>
 
-detailsShow: function(e) {
-    var uid = e.view.params.uid,
-        dataSource = highschoolsviewModel.get('dataSource'),
-        itemModel = dataSource.getByUid(uid);
- 
-    highschoolsviewModel.setCurrentItemByUid(uid);
-    var navbar = $("#nav");
-    navbar.css('background', itemModel.get('Building_BackgroundColor'));
-    /// start detail form show
-    /// end detail form show
-}
-
-
          	function go_map_HIGH() {
                 var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
                  app.openLink(go_map);
