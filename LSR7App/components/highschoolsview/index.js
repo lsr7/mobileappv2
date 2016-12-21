@@ -148,17 +148,15 @@ app.localization.registerView('highschoolsview');
 
                 highschoolsviewModel.setCurrentItemByUid(uid);
 
-                var navbar = $("#nav");
-                navbar.css('background', itemModel.get('Building_BackgroundColor'));
-
-
+   var navbar = $("#nav");
+    navbar.css('background', itemModel.get('Building_BackgroundColor'));
                 /// start detail form show
                 /// end detail form show
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
                     dataSource = highschoolsviewModel.get('dataSource'),
-                    itemModel = dataSource.getByUid(item);drak
+                    itemModel = dataSource.getByUid(item);
 
                 if (!itemModel.Location) {
                     itemModel.Location = String.fromCharCode(160);
