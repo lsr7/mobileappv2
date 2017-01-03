@@ -150,7 +150,13 @@ app.localization.registerView('highschoolsview');
 
    var navbar = $("#nav");
     navbar.css('background', itemModel.get('Building_BackgroundColor'));
+    
                 /// start detail form show
+             function go_Website_HIGH() {
+                       window.open(itemModel.get('Building_Website_HIGH'), '_blank');
+            }
+
+
                 /// end detail form show
             },
             setCurrentItemByUid: function(uid) {
