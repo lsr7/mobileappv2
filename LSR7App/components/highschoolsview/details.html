@@ -24,17 +24,17 @@
                 <button class="schoolButton"> <a data-role="button" data-rel="actionsheetH" data-icon="phonelsr7" class="fa" href="#actionsheetH" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
                 <ul id="actionsheetH" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
                     <li>
-                        <a data-action="onCallMain_HIGH">
+                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallMain_HIGH">
                 Call Main Office
             </a>
                     </li>
                     <li>
-                        <a data-action="onCallAttendance_HIGH">
+                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallAttendance_HIGH">
                 Call Attendance Office
             </a>
                     </li>
                     <li>
-                        <a data-action="onCallCounseling_HIGH">
+                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallCounseling_HIGH">
                 Call Counseling Center
             </a>
                     </li>
@@ -44,12 +44,12 @@
 
                 <button class="schoolButton">
 
-                    <a  onclick="go_map_HIGH()" class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}">
+                    <a class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:go_map_HIGH}">
                 Map</a>
                 </button>
                 <button class="schoolButton">
 
-                    <a onclick="go_Website_HIGH()" class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}" >
+                    <a class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_HIGH}" >
                 Website</a>
                 </button>
             </div>
@@ -60,48 +60,6 @@
             <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
         
     </div>
-
-        <input type="hidden" id="BG" data-bind="value: currentItem.Building_BackgroundColor">
-        <input type="hidden" id="buildbgcolorHIGH"  data-bind="value: currentItem.Building_BackgroundColorNumber">      
-        <input type="hidden" id="Building_Website_HIGH" data-bind="value: currentItem.Building_Website">
-        <input type="hidden" id="Main_Phone_HIGH" data-bind="value: currentItem.Main_Phone">
-        <input type="hidden" id="Attendance_Phone_HIGH" data-bind="value: currentItem.Attendance_Phone">
-        <input type="hidden" id="Counseling_Phone_HIGH" data-bind="value: currentItem.Counseling_Phone">
-        <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
-
-        <script>
-
-         	function go_map_HIGH() {
-                var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
-                 app.openLink(go_map);
-            }
-
-            function go_map_HIGH() {
-                var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
-                 app.openLink(go_map);
-            }
-
-
-            function onCallMain_HIGH() {
-   
-                var mainphone_HIGH = document.getElementById('Main_Phone_HIGH').value;
-                document.location.href = 'tel:' + mainphone_HIGH;
-            }
-
-            function onCallAttendance_HIGH() {
-                var attendancephone = document.getElementById('Attendance_Phone_HIGH').value;
-                document.location.href = 'tel:' + attendancephone;
-            }
-
-            function onCallCounseling_HIGH() {
-                var counselingphone = document.getElementById('Counseling_Phone_HIGH').value;
-                document.location.href = 'tel:' + counselingphone;
-            }
-        
-
-        </script>
-
-
     </div>
     <!-- END_CUSTOM_CODE_highschoolsviewModel -->
 </div>

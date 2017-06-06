@@ -1,8 +1,8 @@
 'use strict';
 
 app.middleschoolsview = kendo.observable({
-    onShow: function() {},
-    afterShow: function() {}
+    onShow: function () { },
+    afterShow: function () { }
 });
 app.localization.registerView('middleschoolsview');
 
@@ -10,11 +10,11 @@ app.localization.registerView('middleschoolsview');
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
 // END_CUSTOM_CODE_middleschoolsview
-(function(parent) {
+(function (parent) {
     var dataProvider = app.data.jsonDataProvider1,
         /// start global model properties
         /// end global model properties
-        fetchFilteredData = function(paramFilter, searchFilter) {
+        fetchFilteredData = function (paramFilter, searchFilter) {
             var model = parent.get('middleschoolsviewModel'),
                 dataSource;
 
@@ -50,7 +50,7 @@ app.localization.registerView('middleschoolsview');
                     url: dataProvider.url
                 }
             },
-            error: function(e) {
+            error: function (e) {
 
                 if (e.xhr) {
                     var errorText = "";
@@ -84,7 +84,7 @@ app.localization.registerView('middleschoolsview');
         /// end data sources
         middleschoolsviewModel = kendo.observable({
             _dataSourceOptions: dataSourceOptions,
-            fixHierarchicalData: function(data) {
+            fixHierarchicalData: function (data) {
                 var result = {},
                     layout = {};
 
@@ -135,23 +135,24 @@ app.localization.registerView('middleschoolsview');
 
                 return result;
             },
-            itemClick: function(e) {
+            itemClick: function (e) {
                 var dataItem = e.dataItem || middleschoolsviewModel.originalItem;
 
                 app.mobileApp.navigate('#components/middleschoolsview/details.html?uid=' + dataItem.uid);
 
             },
-            detailsShow: function(e) {
+            detailsShow: function (e) {
                 var uid = e.view.params.uid,
                     dataSource = middleschoolsviewModel.get('dataSource'),
                     itemModel = dataSource.getByUid(uid);
 
                 middleschoolsviewModel.setCurrentItemByUid(uid);
-
+                var navbar = $("#nav");
+                navbar.css('background', itemModel.get('Building_BackgroundColor'));
                 /// start detail form show
                 /// end detail form show
             },
-            setCurrentItemByUid: function(uid) {
+            setCurrentItemByUid: function (uid) {
                 var item = uid,
                     dataSource = middleschoolsviewModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
@@ -165,11 +166,11 @@ app.localization.registerView('middleschoolsview');
 
                 middleschoolsviewModel.set('originalItem', itemModel);
                 middleschoolsviewModel.set('currentItem',
-                    middleschoolsviewModel.fixHierarchicalData(itemModel));
+                middleschoolsviewModel.fixHierarchicalData(itemModel));
 
                 return itemModel;
             },
-            linkBind: function(linkString) {
+            linkBind: function (linkString) {
                 var linkChunks = linkString.split('|');
                 if (linkChunks[0].length === 0) {
                     return this.get('currentItem.' + linkChunks[1]);
@@ -178,7 +179,29 @@ app.localization.registerView('middleschoolsview');
             },
             /// start masterDetails view model functions
             /// end masterDetails view model functions
-            currentItem: {}
+            currentItem: {},
+            go_map_HIGH: function () {
+                app.openLink(highschoolsviewModel.get('currentItem').Building_Website);
+            },
+
+            go_Website_MID: function () {
+                var go_web = middleschoolsviewModel.get('currentItem').Building_Website;
+                window.open(go_web, '_blank');
+            },
+
+            onCallMain_MID: function () {
+                document.location.href = 'tel:' + middleschoolsviewModel.get('currentItem').Main_Phone;
+            },
+
+            onCallAttendance_MID: function () {
+                var attendancephone = middleschoolsviewModel.get('currentItem').Attendance_Phone;
+                document.location.href = 'tel:' + attendancephone;
+            },
+
+            onCallCounseling_MID: function () {
+                var counselingphone = middleschoolsviewModel.get('currentItem').Counseling_Phone;
+                document.location.href = 'tel:' + counselingphone;
+            }
         });
 
     if (typeof dataProvider.sbProviderReady === 'function') {
@@ -194,7 +217,7 @@ app.localization.registerView('middleschoolsview');
         parent.set('middleschoolsviewModel', middleschoolsviewModel);
     }
 
-    parent.set('onShow', function(e) {
+    parent.set('onShow', function (e) {
         var param = e.view.params.filter ? JSON.parse(e.view.params.filter) : null,
             isListmenu = false,
             backbutton = e.view.element && e.view.element.find('header [data-role="navbar"] .backButtonWrapper'),
