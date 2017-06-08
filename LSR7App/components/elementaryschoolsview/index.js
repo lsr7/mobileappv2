@@ -147,7 +147,8 @@ app.localization.registerView('elementaryschoolsview');
                     itemModel = dataSource.getByUid(uid);
 
                 elementaryschoolsviewModel.setCurrentItemByUid(uid);
-
+                    var navbar = $("#nav3");
+                navbar.css('background', itemModel.get('Building_BackgroundColor'));
                 /// start detail form show
                 /// end detail form show
             },
@@ -178,7 +179,29 @@ app.localization.registerView('elementaryschoolsview');
             },
             /// start masterDetails view model functions
             /// end masterDetails view model functions
-            currentItem: {}
+            currentItem: {},
+            go_map_ELEM: function () {
+                app.openLink(elementaryschoolsviewModel.get('currentItem').Building_Website);
+            },
+
+            go_Website_ELEM: function () {
+                var go_web = elementaryschoolsviewModel.get('currentItem').Building_Website;
+                window.open(go_web, '_blank');
+            },
+
+            onCallMain_ELEM: function () {
+                document.location.href = 'tel:' + elementaryschoolsviewModel.get('currentItem').Main_Phone;
+            },
+
+            onCallAttendance_ELEM: function () {
+                var attendancephone = elementaryschoolsviewModel.get('currentItem').Attendance_Phone;
+                document.location.href = 'tel:' + attendancephone;
+            },
+
+            onCallCounseling_ELEM: function () {
+                var counselingphone = elementaryschoolsviewModel.get('currentItem').Counseling_Phone;
+                document.location.href = 'tel:' + counselingphone;
+            }
         });
 
     if (typeof dataProvider.sbProviderReady === 'function') {

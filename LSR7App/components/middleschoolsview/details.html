@@ -1,6 +1,6 @@
 <div data-role="view" data-title="Details" data-model="app.middleschoolsview.middleschoolsviewModel" data-bind="events: { show: detailsShow }" id="middleschoolsviewModelDetailsView">
     <header data-role="header"  >
-        <div data-role="navbar" id='nav' class="header-text" id="navbarcolor" >
+        <div data-role="navbar" id='nav2' class="header-text" id="navbarcolor" >
             <a data-role="backbutton" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
             <span data-bind="text: currentItem['Location']"></span>
         </div>
@@ -21,8 +21,8 @@
 
 
             <div data-role="tabstrip" class="tab_schools">
-                <button class="schoolButton"> <a data-role="button" data-rel="actionsheetH" data-icon="phonelsr7" class="fa" href="#actionsheetH" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
-                <ul id="actionsheetH" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
+                <button class="schoolButton"> <a data-role="button" data-rel="actionsheetM" data-icon="phonelsr7" class="fa" href="#actionsheetM" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
+                <ul id="actionsheetM" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
                     <li>
                         <a data-action="app.middleschoolsview.middleschoolsviewModel.onCallMain_MID">
                 Call Main Office

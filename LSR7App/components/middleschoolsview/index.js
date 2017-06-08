@@ -147,7 +147,7 @@ app.localization.registerView('middleschoolsview');
                     itemModel = dataSource.getByUid(uid);
 
                 middleschoolsviewModel.setCurrentItemByUid(uid);
-                var navbar = $("#nav");
+                var navbar = $("#nav2");
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
                 /// start detail form show
                 /// end detail form show
