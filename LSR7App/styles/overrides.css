@@ -360,3 +360,20 @@
 .km-flat .field--gallery:not(.field--gallery-slider) .field__content .gallery__items:after {
   background: rgba(0, 0, 0, 0.1);
 }
+
+.panelStyle {
+
+text-decoration: none;
+}
+
+.divPanelStyle {
+
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding: 12px 0px 12px 0px;
+
+}
+.rotateIcon {
+
+transform: rotate(90deg) translate(-6px, -5px);
+
+}

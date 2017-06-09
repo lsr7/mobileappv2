@@ -829,6 +829,12 @@ i.fa.fa-bars {
     margin-left: -13px;
 }
 
+i.fa.fa-chevron-right {
+
+color: #97a0a4;
+padding-left: 10px;
+font-size: 0.8em;
+}
 #titleBar {
     background-color: #4D8CAC!important;
 }
