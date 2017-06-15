@@ -50,6 +50,6 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.feedback@2.0.3.0"
+    "com.telerik.feedback@2.0.4"
   ]
 }

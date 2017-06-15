@@ -181,7 +181,7 @@ app.localization.registerView('highschoolsview');
             /// end masterDetails view model functions
             currentItem: {},
             go_map_HIGH: function () {
-                app.openLink(highschoolsviewModel.get('currentItem').Building_Website);
+                app.openLink(highschoolsviewModel.get('currentItem').Map_Links);
             },
 
             go_Website_HIGH: function () {

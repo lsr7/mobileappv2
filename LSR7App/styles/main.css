@@ -648,7 +648,7 @@ Fields
 }
 
 .tab_schools {
-    text-align: left;
+    text-align: center;
     padding: .5rem 0!important;
 }
 
@@ -683,8 +683,12 @@ Fields
 
 .AdminImgH3 {
     color: rgb(171, 208, 239);
+    font-size: 1.5rem;
 }
 
+.AdminImgH5 {
+    font-size: 1rem;
+}
 .schoolButton {
     border: none;
     padding: 0;
