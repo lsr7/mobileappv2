@@ -361,6 +361,12 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
+
+/* START_CUSTOM_CODE_kendoUiMobileApp */
+
+
+/* Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes */
+
 .panelStyle {
 
 text-decoration: none;
@@ -377,3 +383,5 @@ padding: 12px 0px 12px 0px;
 transform: rotate(90deg) translate(-6px, -5px);
 
 }
+
+/* END_CUSTOM_CODE_kendoUiMobileApp */
