@@ -12,11 +12,11 @@
 
         <div class="schools">
 
-                <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
-  
+            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
+
             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
-                <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
-                <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
+                <h4 class="school_title" data-bind="text: currentItem.Building_Name" align="center"><strong></strong></h4>
+                <p class="school_address" data-bind="text: currentItem.Building_Address" align="center"></p>
             </div>
 
 
@@ -49,17 +49,17 @@
                 </button>
                 <button class="schoolButton">
 
-                    <a class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_HIGH}" >
+                    <a class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_HIGH}">
                 Website</a>
                 </button>
             </div>
             <hr class="schools_hr">
-            <img id="imgPrin" data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
-
-            <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
-            <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
-        
-    </div>
+            <img id="imgPrin" data-bind="attr: { src: currentItem.Principal_Image }" width="45%" align="left" style="margin-left: 40px; margin-top: 15px; position: relative;">
+            <div style="text-align: center; margin-top: 80px;">
+                <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
+                <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
+            </div>
+        </div>
     </div>
     <!-- END_CUSTOM_CODE_highschoolsviewModel -->
 </div>

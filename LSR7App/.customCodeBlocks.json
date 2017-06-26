@@ -1,0 +1,24 @@
+{
+    "customCode": [
+        {
+            "file": ".js",
+            "tag": "elementaryschoolsviewModel",
+            "block": "// START_CUSTOM_CODE_elementaryschoolsviewModel\r\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\r\n\r\n// END_CUSTOM_CODE_elementaryschoolsviewModel"
+        },
+        {
+            "file": ".js",
+            "tag": "middleschoolsviewModel",
+            "block": "// START_CUSTOM_CODE_middleschoolsviewModel\r\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\r\n\r\n// END_CUSTOM_CODE_middleschoolsviewModel"
+        },
+        {
+            "file": ".js",
+            "tag": "highschoolsviewModel",
+            "block": "// START_CUSTOM_CODE_highschoolsviewModel\r\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\r\n\r\n// END_CUSTOM_CODE_highschoolsviewModel"
+        },
+        {
+            "file": ".js",
+            "tag": "otherbuildingsviewModel",
+            "block": "// START_CUSTOM_CODE_otherbuildingsviewModel\r\n// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes\r\n\r\n// END_CUSTOM_CODE_otherbuildingsviewModel"
+        }
+    ]
+}
