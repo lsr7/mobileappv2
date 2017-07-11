@@ -12,52 +12,40 @@
 
         <div class="schools">
 
-            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
+            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%; max-height: 230px;">
 
             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name" align="center"><strong></strong></h4>
                 <p class="school_address" data-bind="text: currentItem.Building_Address" align="center"></p>
             </div>
 
-
+            <div id='schoolbuttons' class="schools2">
             <div data-role="tabstrip" class="tab_schools">
-                <button class="schoolButton"> <a data-role="button" data-rel="actionsheetH" data-icon="phonelsr7" class="fa" href="#actionsheetH" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
-                <ul id="actionsheetH" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
-                    <li>
-                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallMain_HIGH">
-                Call Main Office
-            </a>
-                    </li>
-                    <li>
-                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallAttendance_HIGH">
-                Call Attendance Office
-            </a>
-                    </li>
-                    <li>
-                        <a data-action="app.highschoolsview.highschoolsviewModel.onCallCounseling_HIGH">
-                Call Counseling Center
-            </a>
-                    </li>
-
-
-                </ul>
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_HIGH}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Main</a>
+                </button>
 
                 <button class="schoolButton">
 
-                    <a class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:go_map_HIGH}">
-                Map</a>
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events: {click:go_map_HIGH}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
                 </button>
                 <button class="schoolButton">
 
-                    <a class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_HIGH}">
-                Website</a>
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_HIGH}"><span><i class="fa fa-mouse-pointer" aria-hidden="true"></i><br></span>Website</a>
                 </button>
+                </div>
+                <div data-role="tabstrip" class="tab_schools2">
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_HIGH}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Attnd.</a>
+                </button>
+
+                <button class="schoolButton">
+
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
+                </button>
+                
             </div>
-            <hr class="schools_hr">
-            <img id="imgPrin" data-bind="attr: { src: currentItem.Principal_Image }" width="45%" align="left" style="margin-left: 40px; margin-top: 15px; position: relative;">
-            <div style="text-align: center; margin-top: 80px;">
-                <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
-                <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
+            </div>
             </div>
         </div>
     </div>

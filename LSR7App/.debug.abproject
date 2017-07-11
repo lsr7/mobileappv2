@@ -1,12 +1,1 @@
-{
-  "CorePlugins": [
-    "com.telerik.feedback@2.0.4"
-  ],
-  "CordovaPluginVariables": {
-    "com.telerik.feedback": {
-      "API_KEY": "lw2dukv90z14cxdj",
-      "API_URL": "https://platform.telerik.com/feedback/api/v1",
-      "ENABLE_SHAKE": "True"
-    }
-  }
-}
+{}

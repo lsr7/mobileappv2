@@ -797,7 +797,11 @@ Fields
 
 .tab_schools {
     text-align: center;
-    padding: .5rem 0!important;
+    padding-top: .8rem!important;
+}
+
+.tab_schools2 {
+    text-align: center;
 }
 
 .km-flat .km-tabstrip .km-button.schools_btn {
@@ -831,25 +835,34 @@ Fields
 
 .AdminImgH3 {
     color: rgb(171, 208, 239);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin: 0px;
+    margin-bottom: 10px;
 }
 
 .AdminImgH5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 0px;
+    margin-bottom: 10px;
+
 }
 
 .schoolButton {
     border: none;
     padding: 0;
     margin: 10px;
+    opacity: .8;
 }
 
 .schoolButton a {
-    width: 60px
+    width: 105px;
+    height: 105px;
+    line-height: 1rem;
 }
 
 .schoolButton a .km-text {
-    font-size: 1rem
+    font-size: 18px;
+    padding-bottom: 25px;
 }
 
 .km-flat .km-state-active[style*=background] {
@@ -992,5 +1005,12 @@ i.fa.fa-chevron-right {
     background-color: #4D8CAC!important;
 }
 
+.schools2 {
+
+background-color: white!important;
+
+}
+
+#highschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */

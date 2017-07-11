@@ -47,42 +47,7 @@
         </header>
     </div>
 
-    <div id="appDrawer" data-role="drawer" data-title="Navigation">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
-        <ul id="navigation-container" data-role="listview">
-            <li><a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a></li>
-
-            <li><a href="components/allBuildingsView/view.html " data-icon="edit "><span class="navigation-link-text " data-bind="text: strings.allBuildingsView.title "></span></a></li>
-
-
-            <li><a href="components/lunch/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.lunch.title"></span></a></li>
-
-
-            <li><a href="components/settingsView/view.html" data-icon="settings"><span class="navigation-link-text" data-bind="text: strings.settingsView.title"></span></a></li>
-            <li id="flip"><a><i class="fa fa-cutlery"></i> Lunch</a></li>
-            <li id="panel" style="text-align: center">
-                <div class="divPanelStyle"><a onclick="window.open(&apos;http://leessummitschoolnutrition.com/?page=main&apos;, &apos;_blank&apos;)" class="panelStyle">LSR7 Nutrition</a><i class="fa fa-chevron-right"></i>
-                    <br>
-                </div>
-                <div class="divPanelStyle">
-                    <a onclick="window.open(&apos;https://www.myschoolbucks.com/ver2/login/getmain&apos;, &apos;_blank&apos;)" "=" " class="panelStyle ">MySchoolBucks</a><i class="fa fa-chevron-right "></i><br></div>
-                <div style="padding: 10px 0px 10px 0px; "><a class="panelStyle " id="rotateIcon2 ">Menus</a><i class="fa fa-chevron-right " id="i2 "></i></div>
-                </li><li id="flip "><a><i class="fa fa-cutlery "></i> Lunch</a></li><li id="panel " style="text-align: center ">
-                <div class="divPanelStyle "><a onclick="window.open(&apos;http://leessummitschoolnutrition.com/?page=main&apos;, &apos;_blank&apos;) " class="panelStyle ">LSR7 Nutrition</a><i class="fa fa-chevron-right "></i>
-                    <br>
-                </div>
-                <div class="divPanelStyle ">
-                    <a onclick="window.open(&apos;https://www.myschoolbucks.com/ver2/login/getmain&apos;, &apos;_blank&apos;) " "=" " class="panelStyle ">MySchoolBucks</a><i class="fa fa-chevron-right "></i>
-                    <br>
-                </div>
-                <div style="padding: 10px 0px 10px 0px; "><a class="panelStyle " id="rotateIcon2 ">Menus</a><i class="fa fa-chevron-right " id="i2 "></i></div>
-            </li>
-        </ul>
-    </div>
+    
     <div id="notify " class="notify-pop-up ">
         <span class="notify-pop-up__content "></span>
     </div>
@@ -108,14 +73,6 @@
                 list-style-type: none;
             }
         </style>
-
-        <script>
-            $(document).ready(function() {
-                $("#rotateIcon2 ").click(function() {
-                    $("#i2 ").toggleClass("rotateIcon ");
-                });
-            });
-        </script>
     </div>
     <div data-role="layout " data-id="main ">
         <header data-role="header ">
@@ -156,12 +113,12 @@
             <li><a onclick="window.open('https://powerschool.lsr7.org', '_blank')"><img src="img/powerschool-icon-2-1.png" style="width:6%" align="top"> PowerSchool</a></li>
             <li><a onclick="window.open('http://www.infofinderi.com/ifi/?cid=L', '_blank')"><i class="fa fa-bus"></i> Transportation</a></li>
              <li id="flip"><a><i class="fa fa-cutlery"></i> Lunch</a></li>
-            <li id="panel" style="text-align: center">
+            <li id="panel" style="text-align: left;">
                 <div class="divPanelStyle"><a onclick="window.open('http://leessummitschoolnutrition.com/?page=main', '_blank')" class="panelStyle">LSR7 Nutrition</a><i class="fa fa-chevron-right"></i><br></div>
                 <div class="divPanelStyle"><a onclick="window.open('https://www.myschoolbucks.com/ver2/login/getmain', '_blank')"" class="panelStyle">MySchoolBucks</a><i class="fa fa-chevron-right"></i><br></div>
-                <div style="padding: 10px 0px 10px 0px;"><a class="panelStyle" id="rotateIcon2">Menus</a><i class="fa fa-chevron-right" id="i2"></i></div>
+                <div class="divPanelStyle"><a onclick="window.open('http://leessummitschoolnutrition.com/?page=menus', '_blank')"" class="panelStyle">Menus</a><i class="fa fa-chevron-right"></i><br></div>
                 </li>
-                 <li><a href="components/calendar/view.html" data-icon="home">Calendar</a></li>
+                 <li><a href="components/calendar/view.html"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</a></li>
             <li class="socialMediaIcons"><a onclick="window.open('https://www.facebook.com/LSR7Schools/', '_blank')"><i class="fa fa-facebook-square"></i></a><a onclick="window.open('https://twitter.com/LSR7?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&scrlybrkr=66ed0bd3', '_blank')"><i class="fa fa-twitter-square" style="margin-left: 5px;"></i></a></li>
         </ul>
     </div>
