@@ -79,9 +79,13 @@
         }
     };
 
-    app.openLink = function(url) {
+app.openLink = function(url) {
         if (url.substring(0, 4) === 'geo:' && device.platform === 'iOS') {
-            url = 'http://maps.apple.com/?ll=' + url.substring(4, url.length);
+            url = 'http://maps.apple.com/?daddr=' + url.substring(4, url.length);
+        }
+         if (url.substring(0, 4) === 'geo:' && device.platform === 'Android') {
+            url = 'geo://0,0?q=' + url.substring(4, url.length);
+    
         }
 
         window.open(url, '_system');
@@ -89,9 +93,10 @@
             window.event.preventDefault && window.event.preventDefault();
             window.event.returnValue = false;
         }
-    };
+}
 
     /// start appjs functions
+    
     /// end appjs functions
     app.showFileUploadName = function(itemViewName) {
         $('.' + itemViewName).off('change', 'input[type=\'file\']').on('change', 'input[type=\'file\']', function(event) {
@@ -206,4 +211,6 @@
 //function onDeviceReady() {
 //    window.open = cordova.InAppBrowser.open;
 //}
+
+
 // END_CUSTOM_CODE_kendoUiMobileApp

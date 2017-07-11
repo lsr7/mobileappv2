@@ -27,7 +27,7 @@
 
                 <button class="schoolButton">
 
-                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events: {click:go_map_HIGH}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
+                    <a onclick="go_map_HIGH()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
                 </button>
                 <button class="schoolButton">
 
@@ -41,10 +41,56 @@
 
                 <button class="schoolButton">
 
-                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
+                    <a class="fa" id="flip" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
                 </button>
-                
+
             </div>
+
+            <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
+
+            <script>
+        function go_map_HIGH() {
+               var go_map = 'geo:' + document.getElementById('Map_HIGH').value;
+                app.openLink(go_map);
+           }
+           </script>
+           <div>
+        <script>
+            $(document).ready(function() {
+                $("#flip ").click(function() {
+                    $("#panel ").slideToggle("fast ");
+                });
+            });
+        </script>
+        <style>
+            #panel {
+                padding: 0px;
+                display: none;
+            }
+            
+            ul {
+                list-style-type: none;
+            }
+        </style>
+    </div>
+    <div id="panel">
+        <div style="width: 100%; border-top: 2px solid black;">
+            <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
+                <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></h5>
+                <h6 class="AdminImgH5" data-bind="text: currentItem.BA1"></h6>
+            </div>
+            <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
+                <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Assist_Principal_Name" style="text-align: center;"></span></h5>
+                <ul style="list-style-type: none; padding: 0px; margin-left: 14.720px; margin-top: 0px; text-align: center;">
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA2"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA3"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA4"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA5"></h6></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
             </div>
             </div>
         </div>
