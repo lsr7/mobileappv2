@@ -12,46 +12,97 @@
 
         <div class="schools">
 
-            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%">
+            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%; max-height: 230px;">
 
             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
-                <h4 class="school_title" data-bind="text: currentItem.Building_Name"><strong></strong></h4>
-                <p class="school_address" data-bind="text: currentItem.Building_Address"></p>
+                <h4 class="school_title" data-bind="text: currentItem.Building_Name" align="center"><strong></strong></h4>
+                <p class="school_address" data-bind="text: currentItem.Building_Address" align="center"></p>
             </div>
 
-
+        <div id='schoolbuttons' class="schools2">
             <div data-role="tabstrip" class="tab_schools">
-                <button class="schoolButton"> <a data-role="button" data-rel="actionsheetH" data-icon="phonelsr7" class="fa" href="#actionsheetH" data-bind="style: { background:currentItem.Building_BackgroundColor}">Call</a></button>
-                <ul id="actionsheetH" data-role="actionsheet" class="schools_calling" data-click="navigateToAddress" data-popup="{" transition="" ":=" " "slide="" ",=" " "height="" "auto=" " "width="" 200,="" "direction=" " "left="" "=" " }">
-                    <li>
-                        <a data-action="app.otherbuildingsview.otherbuildingsviewModel.onCallMain_OTHER">
-                Call Main Office
-            </a>
-                    </li>
-                    <li>
-                        <a data-action="app.otherbuildingsview.otherbuildingsviewModel.onCallAttendance_OTHER">
-                Call Attendance Office
-            </a>
-                    </li>
-                </ul>
-
-                <button class="schoolButton">
-
-                    <a class="fa" data-icon="map" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:go_map_OTHER}">
-                Map</a>
+                 <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Main</a>
                 </button>
+
+                <button class="schoolButton">
+                    <a onclick="go_map_OTHER()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
+                </button>
+
+                <button class="schoolButton">
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_OTHER}"><span><i class="fa fa-mouse-pointer" aria-hidden="true"></i><br></span>Website</a>
+                </button>
+                </div>
+                <div data-role="tabstrip" class="tab_schools2">
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Attnd.</a>
+                </button>
+
                 <button class="schoolButton">
 
-                    <a class="fa" data-icon="website" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_OTHER}">
-                Website</a>
+                    <a class="fa" id="flip" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
                 </button>
             </div>
-            <hr class="schools_hr">
-            <img id="imgPrin" data-bind="attr: { src: currentItem.Principal_Image }" width="50%" align="left" style="margin-left: 10px; margin-top: 15px; margin-right: 20px;">
 
-            <h3 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></span></h3>
-            <h5 class="AdminImgH5" data-bind="text: currentItem.Principal_Type"></h5>
+            <div data-role="tabstrip" class="tab_schools2">
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Attnd.</a>
+                </button>
 
+                <button class="schoolButton">
+                    <a class="fa" id="flip" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
+                </button>
+
+            </div>
+
+            <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
+
+            <script>
+                function go_map_OTHER() {
+                    var go_map = 'geo:' + document.getElementById('Map_OTHER').value;
+                    app.openLink(go_map);
+                }
+            </script>
+
+            <div>
+                <script>
+                    $(document).ready(function() {
+                        $("#flip ").click(function() {
+                            $("#panel").slideToggle("fast ");
+                        });
+                    });
+                </script>
+                <style>
+                    #panel {
+                        padding: 0px;
+                        display: none;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                    }
+                </style>
+            </div>
+            <div id="panel">
+        <div style="width: 100%; border-top: 2px solid black;">
+            <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
+                <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></h5>
+                <h6 class="AdminImgH5" data-bind="text: currentItem.BA1"></h6>
+            </div>
+            <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
+                <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Assist_Principal_Name" style="text-align: center;"></span></h5>
+                <ul style="list-style-type: none; padding: 0px; margin-left: 14.720px; margin-top: 0px; text-align: center;">
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA2"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA3"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA4"></h6></li>
+                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA5"></h6></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+            </div>
+            </div>
         </div>
     </div>
     <!-- END_CUSTOM_CODE_otherbuildingsviewModel -->

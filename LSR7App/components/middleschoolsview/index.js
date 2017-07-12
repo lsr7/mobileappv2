@@ -151,7 +151,9 @@ app.localization.registerView('middleschoolsview');
 
                 middleschoolsviewModel.setCurrentItemByUid(uid);
                     var navbar = $("#nav2");
+                    var schoolbuttons = $("#schoolbuttons");
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
+                schoolbuttons.css('background', 'url('+itemModel.get('Principal_Image')+') no-repeat 50% 50%');
                 /// start detail form show
                 /// end detail form show
             },
@@ -184,7 +186,7 @@ app.localization.registerView('middleschoolsview');
             /// end masterDetails view model functions
             currentItem: {},
             go_map_HIGH: function () {
-                app.openLink(highschoolsviewModel.get('currentItem').Building_Website);
+                app.openLink(middleschoolsviewModel.get('currentItem').Map_Links);
             },
 
             go_Website_MID: function () {
