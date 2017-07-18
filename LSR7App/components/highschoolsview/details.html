@@ -26,9 +26,8 @@
                     <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_HIGH}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Main</a>
                 </button>
 
-                <button class="schoolButton">
-
-                    <a onclick="go_map_HIGH()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_HIGH}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Attendance</a>
                 </button>
                 <button class="schoolButton">
 
@@ -36,8 +35,9 @@
                 </button>
                 </div>
                 <div data-role="tabstrip" class="tab_schools2">
-                <button class="schoolButton"> 
-                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_HIGH}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Attendance</a>
+                <button class="schoolButton">
+
+                    <a onclick="go_map_HIGH()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
                 </button>
 
                 <button class="schoolButton">

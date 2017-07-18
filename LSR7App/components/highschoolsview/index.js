@@ -151,9 +151,7 @@ app.localization.registerView('highschoolsview');
 
                 highschoolsviewModel.setCurrentItemByUid(uid);
                 var navbar = $("#nav");
-                var schoolbuttons = $("#schoolbuttons");
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
-                schoolbuttons.css('background', 'url('+itemModel.get('Principal_Image')+') no-repeat 50% 50%');
 
                 /// start detail form show
                 /// end detail form show

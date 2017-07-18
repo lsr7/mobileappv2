@@ -22,22 +22,22 @@
         <div id='schoolbuttons' class="schools2">
             <div data-role="tabstrip" class="tab_schools">
                  <button class="schoolButton"> 
-                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Main</a>
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Main</a>
                 </button>
 
-                <button class="schoolButton">
-                    <a onclick="go_map_OTHER()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
+                <button class="schoolButton"> 
+                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Attendance</a>
                 </button>
+
 
                 <button class="schoolButton">
                     <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_OTHER}"><span><i class="fa fa-mouse-pointer" aria-hidden="true"></i><br></span>Website</a>
                 </button>
                 </div>
                 <div data-role="tabstrip" class="tab_schools2">
-                <button class="schoolButton"> 
-                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_OTHER}"><span><i class="fa fa-phone" aria-hidden="true"></i><br></span>Call Attnd.</a>
+                <button class="schoolButton">
+                    <a onclick="go_map_OTHER()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker" aria-hidden="true"></i><br></span>Map</a>
                 </button>
-
                 <button class="schoolButton">
 
                     <a class="fa" id="flip" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
