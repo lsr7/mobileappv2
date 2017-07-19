@@ -1024,4 +1024,6 @@ a.homeButtons {
   text-decoration: none;
     color: black;
 }
+
+.km-flat .km-header .km-navbar {padding-top: 5px;}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
