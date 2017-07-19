@@ -1013,10 +1013,15 @@ background-color: white!important;
 
 #highschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
-#middleschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
+#homeViewScreen > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
-#elementaryschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
-
-#otherbuildingsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
-
+a.homeButtons {
+    
+    border: none; 
+    padding: 0; 
+    background: none;
+    font-size: 12px;
+  text-decoration: none;
+    color: black;
+}
 /* END_CUSTOM_CODE_kendoUiMobileApp */

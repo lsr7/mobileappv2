@@ -1,5 +1,7 @@
 <div data-role="view" data-title="View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow" id="homeViewScreen" class="screen">
     <header data-role="header">
+        <link rel="stylesheet" href="http://kendo.cdn.telerik.com/VERSION/styles/kendo.common-bootstrap.min.css">
+                <link rel="stylesheet" href="http://kendo.cdn.telerik.com/VERSION/styles/kendo.bootstrap.min.css">
         <div data-role="navbar" class="header-text">
 
             <span data-bind="text: strings.homeView.title"></span>
@@ -12,6 +14,29 @@
 
     <!-- START_CUSTOM_CODE_homeView -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <h1 data-bind="html: title"></h1>
+    <div style="background-color: blue; width: 100%; height: 250px;">hi</div>
+    <div class="homeButtons">
+        <div style="width: 100%; padding-top: 50px; text-align: center; padding-bottom: 20%">
+            <div style="width: 30%; float: left; display: inline-block; margin-left: 15%;">
+                <a onclick="window.open('http://www.lsr7.org/parents/enroll/', '_blank')" class="homeButtons"><img src="img\/enroll.png" width="90px;" height="90px;"/>
+                <h2 style="margin: 0;">ENROLL</h2></a>
+            </div>
+            <div style=" width: 30%; float: right; display: inline-block; margin-right: 15%;">
+                <a onclick="window.open('https://www.lsedfoundation.com/', '_blank')" class="homeButtons"><img src="img\/lsef.png" width="90px;" height="90px;"/>
+                <h2 style="margin: 0;">LSEF</h2></a>
+            </div>
+        </div>
+        <div style="width: 100%; padding-top: 20%; text-align: center;">
+            <div style=" width: 30%; float: left; display: inline-block; margin-left: 15%;">
+                <a onclick="window.open('https://sta.lsr7.org/missouri-innovation-campus/', '_blank')" class="homeButtons"><img src="img\/mic.png" width="90px;" height="90px;"/>
+                <h2 style="margin: 0;">MIC</h2></a>
+            </div>
+            <div style=" width: 30%; float: right; display: inline-block; margin-right: 15%;">
+               <a onclick="window.open('http://www.lsr7.org/schools/all/', '_blank')" class="homeButtons"><img src="img\/schools.png" width="90px;" height="90px;"/>
+               <h2 style="margin: 0;">SCHOOLS</h2></a>
+            </div>
+        </div>
+    </div>
+
     <!-- END_CUSTOM_CODE_homeView -->
 </div>
