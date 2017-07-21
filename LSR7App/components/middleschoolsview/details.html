@@ -40,7 +40,7 @@
                 </button>
 
                 <button class="schoolButton">
-                    <a class="fa" id="flip" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
+                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}"><span><i class="fa fa-users" aria-hidden="true"></i><br></span>Admin.</a>
                 </button>
             </div><!-- End div class="tab_schools2" -->
 
@@ -53,25 +53,8 @@
                  }
             </script>
                   <div>
-             <script>
-                $(document).ready(function() {
-               	    $("#flip ").click(function() {
-                        $("#panel ").slideToggle("fast ");
-                     });
-                });
-            </script>
-            <style>
-                 #panel {
-                     padding: 0px;
-                     display: none;
-                 }
-            
-                 ul {
-                    list-style-type: none;
-                 }
-             </style>
          </div>
-         <div id="panel">
+         <div>
         <div style="width: 100%; border-top: 2px solid black;">
             <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
                 <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></h5>
