@@ -48,6 +48,7 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.feedback@2.0.4"
+    "com.telerik.feedback@2.0.4",
+    "cordova-plugin-inappbrowser"
   ]
 }
