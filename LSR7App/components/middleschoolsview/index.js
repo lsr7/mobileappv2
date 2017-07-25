@@ -190,7 +190,7 @@ app.localization.registerView('middleschoolsview');
 
             go_Website_MID: function () {
                 var go_web = middleschoolsviewModel.get('currentItem').Building_Website;
-                window.open(go_web, '_blank');
+                window.open(go_web, '_system');
             },
 
             onCallMain_MID: function () {

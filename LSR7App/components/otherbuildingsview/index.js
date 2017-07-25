@@ -189,7 +189,7 @@ app.localization.registerView('otherbuildingsview');
 
             go_Website_OTHER: function () {
                 var go_web = otherbuildingsviewModel.get('currentItem').Building_Website;
-                window.open(go_web, '_blank');
+                window.open(go_web, '_system');
             },
 
             onCallMain_OTHER: function () {

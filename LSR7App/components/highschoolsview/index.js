@@ -190,7 +190,7 @@ app.localization.registerView('highschoolsview');
 
             go_Website_HIGH: function () {
                 var go_web = highschoolsviewModel.get('currentItem').Building_Website;
-                window.open(go_web, '_blank');
+                window.open(go_web, '_system');
             },
 
             onCallMain_HIGH: function () {

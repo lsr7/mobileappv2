@@ -192,7 +192,7 @@ app.localization.registerView('elementaryschoolsview');
 
             go_Website_ELEM: function () {
                 var go_web = elementaryschoolsviewModel.get('currentItem').Building_Website;
-                window.open(go_web, '_blank');
+                window.open(go_web, '_system');
             },
 
             onCallMain_ELEM: function () {
