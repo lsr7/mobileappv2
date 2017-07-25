@@ -49,6 +49,7 @@
   },
   "CorePlugins": [
     "com.telerik.feedback@2.0.4",
-    "cordova-plugin-inappbrowser"
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-statusbar"
   ]
 }

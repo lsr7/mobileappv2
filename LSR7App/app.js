@@ -42,6 +42,10 @@
         document.addEventListener('deviceready', function() {
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
+                StatusBar.overlaysWebView(false); //Turns off web view overlay.
+                StatusBar.backgroundColorByHexString('#000000');
+                StatusBar.styleLightContent();
+                defaultConfiguration();
             }
 
             var element = document.getElementById('appDrawer');
