@@ -15,18 +15,19 @@
     </header>
 
 
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="elementaryschoolsviewModelTemplate" data-bind="source: elementaryschoolsviewModel.dataSource, events: {click: elementaryschoolsviewModel.itemClick}"
+    <ul class="allBuildingsList" data-role="listview" data-auto-bind="false" data-style="inset" data-template="elementaryschoolsviewModelTemplate" data-bind="source: elementaryschoolsviewModel.dataSource, events: {click: elementaryschoolsviewModel.itemClick}"
     data-pull-to-refresh="false" data-endless-scroll="false">
     </ul>
 
 
     <script type="text/x-kendo-template" id="elementaryschoolsviewModelTemplate">
-        <div class="image-with-text">
+    
             # data = app.elementaryschoolsview.elementaryschoolsviewModel.fixHierarchicalData(data); #
 
-            <h3>#: data['Building_Name'] #</h3>
+      
+          <a>#: data['Building_Name'] #</a>
 
-        </div>
+
     </script>
 
     <!-- END_CUSTOM_CODE_elementaryschoolsview -->

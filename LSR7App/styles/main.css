@@ -852,18 +852,22 @@ Fields
     padding: 0;
     margin: 10px;
     opacity: .8;
+        width:45%;
 }
 
 .schoolButton a {
-    width: 105px;
-    height: 105px;
+    width: 100%;
+    float:left;
+    height: 115px;
     line-height: 1rem;
 }
 
 .schoolButton a .km-text {
     font-size: 18px;
+        width: 100%;
     padding-bottom: 25px;
 }
+.iconbiggertouch {font-size:2em}
 
 .km-flat .km-state-active[style*=background] {
     -webkit-box-shadow: none;
@@ -990,6 +994,8 @@ header .km-button .km-icon {
     -webkit-margin-end: 0px;
     font-weight: bold;
 }
+.allBuildingsList li {padding:0}
+.allBuildingsList li a {padding:1.2em!important;}
 
 i.fa.fa-bars {
     margin-left: -13px;
@@ -1027,5 +1033,5 @@ a.homeButtons {
 
 .km-flat .km-header .km-navbar {padding-top: 5px;}
 
-
+.km-view-title {line-height:2.5em}
 /* END_CUSTOM_CODE_kendoUiMobileApp */

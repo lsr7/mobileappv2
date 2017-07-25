@@ -12,17 +12,17 @@
     </header>
 
 
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="otherbuildingsviewModelTemplate" data-bind="source: otherbuildingsviewModel.dataSource, events: {click: otherbuildingsviewModel.itemClick}" data-pull-to-refresh="false"
+    <ul class="allBuildingsList" data-role="listview" data-auto-bind="false" data-style="inset" data-template="otherbuildingsviewModelTemplate" data-bind="source: otherbuildingsviewModel.dataSource, events: {click: otherbuildingsviewModel.itemClick}" data-pull-to-refresh="false"
     data-endless-scroll="false">
     </ul>
 
     <script type="text/x-kendo-template" id="otherbuildingsviewModelTemplate">
-        <div class="image-with-text">
+
             # data = app.otherbuildingsview.otherbuildingsviewModel.fixHierarchicalData(data); #
+            
+          <a>#: data['Building_Name'] #</a>
 
-            <h3>#: data['Building_Name'] #</h3>
-
-        </div>
+      
     </script>
     <!-- END_CUSTOM_CODE_otherbuildingsview -->
 </div>

@@ -12,17 +12,17 @@
     </header>
 
 
-    <ul style="text-align: left;" class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="highschoolsviewModelTemplate" data-bind="source: highschoolsviewModel.dataSource, events: {click: highschoolsviewModel.itemClick}"
+    <ul style="text-align: left;" class="allBuildingsList" data-role="listview" data-auto-bind="false"  data-template="highschoolsviewModelTemplate" data-bind="source: highschoolsviewModel.dataSource, events: {click: highschoolsviewModel.itemClick}"
     data-pull-to-refresh="false" data-endless-scroll="false">
     </ul>
 
     <script type="text/x-kendo-template" id="highschoolsviewModelTemplate">
-        <div class="image-with-text">
+
             # data = app.highschoolsview.highschoolsviewModel.fixHierarchicalData(data); #
 
-            <h3>#: data['Building_Name'] #</h3>
+          <a>#: data['Building_Name'] #</a>
 
-        </div>
+ 
 
 
     </script>
