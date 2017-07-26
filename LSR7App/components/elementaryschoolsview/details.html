@@ -7,73 +7,26 @@
     </header>
             <footer data-role="footer">
             <div data-role="tabstrip" id="navigation-container">
-
-                
-                <a  data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_ELEM}" data-icon="phone"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a>
-                <a href="#navigation-show-more-view" data-more="true" data-icon="more"><span class="navigation-link-text" data-bind="text: strings._app.navigationMore"></span></a><a href="components/allBuildingsView/view.html" data-icon="edit"><span class="navigation-link-text" data-bind="text: strings.allBuildingsView.title"></span></a>
-                <a href="components/lunch/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.lunch.title"></span></a>
-                <a href="components/settingsView/view.html" data-icon="settings"><span class="navigation-link-text" data-bind="text: strings.settingsView.title"></span></a>
+                <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_ELEM}" style="font-size: 1rem; padding: 10px;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Main</a>
+                <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallAttendance_ELEM}" style="font-size: 1rem;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Attendance</a>
+                <a onclick="go_map_ELEM()" data-bind="style: { background:currentItem.Building_BackgroundColor}" style="font-size: 1rem;"><span><i class="fa fa-map-marker iconbiggertouch" aria-hidden="true"></i><br></span>Map</a>
+                <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_ELEM}" style="font-size: 1rem;"><i class="fa fa-mouse-pointer iconbiggertouch" aria-hidden="true"></i><br>Website</a>
+                <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
             </div>
             </footer>
     <!-- START_CUSTOM_CODE_elementaryschoolsviewModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <div class="details-content">
         <div class="schools">
-            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%; max-height: 230px;">
+            <img data-bind="attr: { src: currentItem.Building_Image }" style="width:100%; height: 300px; margin-top: 100px;">
             <div class="header" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name" align="center"><strong></strong></h4>
                 <p class="school_address" data-bind="text: currentItem.Building_Address" align="center"></p>
             </div>
-
-            <div id='schoolbuttons' class="schools2">
-            <div data-role="tabstrip" class="tab_schools">
-                <button class="schoolButton"> 
-                    <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_ELEM}"><span><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br></span>Main</a>
-                </button>
-                
-                <button class="schoolButton"> 
-                    <a class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}, events:{click:onCallAttendance_HIGH}"><span><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br></span>Attendance</a>
-                </button>
-   
-            </div>
-             <div data-role="tabstrip" class="tab_schools2">
-                <button class="schoolButton">
-                    <a onclick="go_map_ELEM()" class="fa" data-bind="style: { background:currentItem.Sec_Building_Color}"><span><i class="fa fa-map-marker iconbiggertouch" aria-hidden="true"></i><br></span>Map</a>
-                </button>
-             <button class="schoolButton">
-                     <a class="fa" data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_ELEM}"><span><i class="fa fa-mouse-pointer iconbiggertouch" aria-hidden="true"></i><br></span>Website</a>
-                </button>
-            </div>
-
-
-             <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
-                </div>
-                <div>
-      
-                     <div style="width: 100%; border-top: 2px solid black;">
-                         <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
-                             <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Principal_Name"></span></h5>
-                            <h6 class="AdminImgH5" data-bind="text: currentItem.BA1"></h6>
-                         </div>
-                        <div style="text-align: center; margin-top: 10px; float: left; width: 50%;">
-                            <h5 class="AdminImgH3" data-bind="style: { color:currentItem.Building_BackgroundColor}"><span data-bind="text: currentItem.Assist_Principal_Name" style="text-align: center;"></span></h5>
-                            <ul style="list-style-type: none; padding: 0px; margin-left: 14.720px; margin-top: 0px; text-align: center;">
-                                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA2"></h6></li>
-                                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA3"></h6></li>
-                                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA4"></h6></li>
-                                <li><h6 class="AdminImgH5" data-bind="text: currentItem.BA5"></h6></li>
-                            </ul>
-                      
-                        </div>
-               
-           	         </div>
-                        
                 </div>
             </div>
             </div>
-            </div>
-        </div>
-    </div>
+
 
 
     <!-- END_CUSTOM_CODE_elementaryschoolsviewModel -->
