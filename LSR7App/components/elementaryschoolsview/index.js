@@ -154,11 +154,11 @@ app.localization.registerView('elementaryschoolsview');
                 
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
 
-                 var schoolscontainer = $(".schoolviewcontainer .km-content");
-                 var schoolimage = itemModel.get('Building_Image');
-                schoolscontainer.css('background', 'url('+schoolimage+') no-repeat');
-                schoolscontainer.css('background-size', '170%');
-                schoolscontainer.css('background-position', 'center');
+                //var schoolscontainer = $(".schoolsinfocontainer");
+               //var schoolimage = itemModel.get('Building_Image');
+                //schoolscontainer.css('background', 'url('+schoolimage+') no-repeat');
+               //schoolscontainer.css('background-size', '170%');
+               // schoolscontainer.css('background-position', 'center');
 
                 /// start detail form show
                 /// end detail form show
@@ -259,5 +259,16 @@ app.localization.registerView('elementaryschoolsview');
 
 // START_CUSTOM_CODE_elementaryschoolsviewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+
+ function backbuttonremove() {
+                      var schoolscontainer = $(".schoolviewcontainer .km-content");
+                schoolscontainer.css('background', 'none');
+
+ }
+
+
+
+
+
 
 // END_CUSTOM_CODE_elementaryschoolsviewModel
