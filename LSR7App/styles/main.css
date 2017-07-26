@@ -1027,15 +1027,16 @@ background-color: white!important;
 #elementaryschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
 #homeViewScreen > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
-
+.km-widget.km-button.km-back {padding:0.6em 0.8em 0.4em 0;}
 a.homeButtons {
     
     border: none; 
     padding: 0; 
     background: none;
-    font-size: 12px;
+    font-size: 1em;
+    
   text-decoration: none;
-    color: black;
+    color: #4c5356;
 }
 
 .km-view-title {line-height:2.5em}

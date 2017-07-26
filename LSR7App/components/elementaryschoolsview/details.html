@@ -1,13 +1,13 @@
 <div data-role="view" data-title="Details" data-model="app.elementaryschoolsview.elementaryschoolsviewModel" data-bind="events: { show: detailsShow }" id="elementaryschoolsviewModelDetailsView" >
     <header data-role="header">
        <div data-role="navbar"  id='nav3' class="header-text" id="navbarcolor">
-            <a data-role="backbutton" data-click="backbuttonremove" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
+            <a data-role="backbutton" class="backbutton" data-click="backbuttonremove" data-align="left"><i class="fa fa-chevron-left"></i></a> <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></a>
             <span data-bind="text: currentItem['Location']"></span>
         </div>
     </header>
             <footer data-role="footer">
             <div data-role="tabstrip" id="navigation-container">
-                <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_ELEM}" style="font-size: 1rem; padding: 10px;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Main</a>
+                <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallMain_ELEM}" style="font-size: 1rem;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Main</a>
                 <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallAttendance_ELEM}" style="font-size: 1rem;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Attendance</a>
                 <a onclick="go_map_ELEM()" data-bind="style: { background:currentItem.Building_BackgroundColor}" style="font-size: 1rem;"><span><i class="fa fa-map-marker iconbiggertouch" aria-hidden="true"></i><br></span>Map</a>
                 <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_ELEM}" style="font-size: 1rem;"><i class="fa fa-mouse-pointer iconbiggertouch" aria-hidden="true"></i><br>Website</a>
@@ -25,13 +25,9 @@
                 <p class="school_address" data-bind="text: currentItem.Building_Address" align="center"></p>
             </div>
 
-          <img data-bind="attr: { src: currentItem.Building_Image }" class="school_info_image">
+          <img data-bind="attr: { src: currentItem.Building_Image }" class="school_info_image" >
 
                 </div>
-
-  <ul class="allBuildingsList" data-role="listview" data-auto-bind="false" data-style="inset" >
-    <li><a href="">Documents</a></li>
-    </ul>
 
 
 
