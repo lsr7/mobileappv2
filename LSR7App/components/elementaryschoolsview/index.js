@@ -153,7 +153,12 @@ app.localization.registerView('elementaryschoolsview');
                 var navbar = $("#nav3");
                 
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
-                
+
+                 var schoolscontainer = $(".km-content");
+                 var schoolimage = itemModel.get('Building_Image');
+                schoolscontainer.css('background', 'url('+schoolimage+') no-repeat');
+                schoolscontainer.css('background-size', '170%');
+                schoolscontainer.css('background-position', 'center');
 
                 /// start detail form show
                 /// end detail form show
