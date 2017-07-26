@@ -154,7 +154,7 @@ app.localization.registerView('elementaryschoolsview');
                 
                 navbar.css('background', itemModel.get('Building_BackgroundColor'));
 
-                 var schoolscontainer = $(".km-content");
+                 var schoolscontainer = $(".schoolviewcontainer .km-content");
                  var schoolimage = itemModel.get('Building_Image');
                 schoolscontainer.css('background', 'url('+schoolimage+') no-repeat');
                 schoolscontainer.css('background-size', '170%');
