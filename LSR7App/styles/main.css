@@ -1022,7 +1022,9 @@ background-color: white!important;
 
 .schoolinfobox { width:100%;color:white;margin:0;padding:5% 0; box-shadow: 10px 10px 5px #888888;}
 .school_title {font-size:2rem;padding:10px 0 0 0;    MARGIN-BOTTOM: 0}
-.school_address {padding-bottom:20px;}
+.school_address { font-size: 1.4rem; margin-bottom: 0px;}
+.school_address2 { font-size: 1.4rem; margin-bottom: 0px; margin-top: 10px;}
+
 #highschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
 #elementaryschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}

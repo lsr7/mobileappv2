@@ -11,7 +11,13 @@
                 <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events: {click:onCallAttendance_OTHER}" style="font-size: 1rem;"><i class="fa fa-phone iconbiggertouch" aria-hidden="true"></i><br>Attendance</a>
                 <a onclick="go_map_OTHER()" data-bind="style: { background:currentItem.Building_BackgroundColor}" style="font-size: 1rem;"><span><i class="fa fa-map-marker iconbiggertouch" aria-hidden="true"></i><br></span>Map</a>
                 <a data-bind="style: { background:currentItem.Building_BackgroundColor}, events:{click:go_Website_OTHER}" style="font-size: 1rem;"><i class="fa fa-mouse-pointer iconbiggertouch" aria-hidden="true"></i><br>Website</a>
-                <input type="hidden" id="Map_HIGH"  data-bind="value: currentItem.Map_Links">
+                <input type="hidden" id="Map_OTHER"  data-bind="value: currentItem.Map_Links">
+                 <script>
+                 function go_map_OTHER() {
+                 var go_map = 'geo:' + document.getElementById('Map_OTHER').value;
+                 app.openLink(go_map);
+                 }
+            </script>
             </div>
             </footer>
     <!-- START_CUSTOM_CODE_otherBuildingsviewModel -->
@@ -23,14 +29,16 @@
             <div class="header schoolinfobox" data-bind="style: { background:currentItem.Building_BackgroundColor}">
                 <h4 class="school_title" data-bind="text: currentItem.Building_Name" align="center"></h4>
                 <h4 class="school_address" data-bind="text: currentItem.Building_Address" align="center"></h4>
+                <h4 class="school_address2" data-bind="text: currentItem.BUILDING_CITY" align="center"></h4>
+
             </div>
 
           <img data-bind="attr: { src: currentItem.Building_Image }" class="school_info_image" >
 
                 </div>
                 <div style="float: left; display: inline;">
-                <h3>School Hours: 9:00 am – 4:00 pm</h3>
-                <h3>Office Hours: 8:30 am – 4:30 pm</h3>
+               <h3 data-bind="text: currentItem.BUILDING_HOURS"></h3>
+                <h3 data-bind="text: currentItem.OFFICE_HOURS"></h3>
                 </div>
                 <div style="float: left; display: inline; padding-top: 10px;margin-left:9%">
                     <img src="img\/bell.png" width="70px;" height="70px;"/>
