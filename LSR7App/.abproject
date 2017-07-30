@@ -6,7 +6,7 @@
   "DisplayName": "LSR7",
   "Author": "",
   "Description": "LSR7App",
-  "BundleVersion": "0.1.1",
+  "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1"
@@ -45,10 +45,16 @@
       "API_KEY": "lw2dukv90z14cxdj",
       "API_URL": "https://platform.telerik.com/feedback/api/v1",
       "ENABLE_SHAKE": "True"
+    },
+    "com.telerik.plugin.telerikanalytics": {
+      "AUTO_TRACK_EXCEPTIONS": "False",
+      "AUTO_TRACK_KENDO_EVENTS": "False",
+      "PRODUCT_ID": "fceb199313d54581b20f6c6f689fea87"
     }
   },
   "CorePlugins": [
     "com.telerik.feedback@2.0.4",
+    "com.telerik.plugin.telerikanalytics@3.4.1",
     "cordova-plugin-inappbrowser",
     "cordova-plugin-statusbar"
   ]

@@ -969,8 +969,9 @@ header .km-button .km-icon {
     margin: 0;
 }
 
-.socialMediaIcons {
+li.socialMediaIcons {
     font-size: 2em!important;
+    padding-bottom:0!important;
 }
 
 .menu-title {
@@ -1043,6 +1044,7 @@ a.homeButtons {
 }
 
 .km-view-title {line-height:2.5em}
+
 
 .km-root .km-pane .km-view .km-icon {display: none;}
 /* END_CUSTOM_CODE_kendoUiMobileApp */
