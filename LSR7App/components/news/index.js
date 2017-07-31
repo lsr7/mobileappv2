@@ -43,4 +43,12 @@
     app.newsService = {
         viewModel: new NewsViewModel()
     };
+
+    $("#news-template").kendoMobileListView({
+    dataSource: NewsDataSource,
+    pullToRefresh: true,
+    appendOnRefresh: true,
+    template: $("#news-template").text(),
+});
+
 })(window);
