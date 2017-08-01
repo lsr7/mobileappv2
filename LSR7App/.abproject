@@ -55,7 +55,9 @@
   "CorePlugins": [
     "com.telerik.feedback@2.0.4",
     "com.telerik.plugin.telerikanalytics@3.4.1",
+    "cordova-plugin-file",
     "cordova-plugin-inappbrowser",
-    "cordova-plugin-statusbar"
+    "cordova-plugin-statusbar",
+    "cordova-plugin-whitelist"
   ]
 }
