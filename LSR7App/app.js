@@ -45,7 +45,6 @@
                 StatusBar.overlaysWebView(false); //Turns off web view overlay.
                 StatusBar.backgroundColorByHexString('#000000');
                 StatusBar.styleLightContent();
-                defaultConfiguration();
             }
 
             var element = document.getElementById('appDrawer');
@@ -84,10 +83,12 @@
     };
 
 app.openLink = function(url) {
-        if (url.substring(0, 4) === 'geo:' && device.platform === 'iOS') {
+           if (url.substring(0, 4) === 'geo:' && kendo.support.mobileOS.name === 'ios') {
+         
             url = 'http://maps.apple.com/?daddr=' + url.substring(4, url.length);
         }
-         if (url.substring(0, 4) === 'geo:' && device.platform === 'Android') {
+         if (url.substring(0, 4) === 'geo:' && kendo.support.mobileOS.name === 'android') {
+         
             url = 'geo://0,0?q=' + url.substring(4, url.length);
     
         }
