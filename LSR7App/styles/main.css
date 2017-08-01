@@ -1031,7 +1031,7 @@ background-color: white!important;
 #elementaryschoolsviewModelDetailsView > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
 
 #homeViewScreen > div.km-content.km-widget.km-scroll-wrapper {background-color: white!important;}
-.km-widget.km-button.km-back {padding:0.6em 0.8em 0.4em 0;}
+.km-widget.km-button.km-back {padding:0.6em 1em 0.4em 0;}
 a.homeButtons {
     
     border: none; 
