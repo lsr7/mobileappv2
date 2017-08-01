@@ -1,4 +1,4 @@
-  <div data-role="view" id="news"  data-model="app.newsService.viewModel">
+  <div data-role="view" id="news"  data-model="app.newsService.viewModel" data-reload="true">
   
     <header data-role="header">
         <div data-role="navbar" class="header-text">
@@ -11,11 +11,13 @@
     </header>
 
 
-        <ul data-role="listview" data-style="inset"
+        <ul  data-role="listview" data-style="inset"
             data-bind="source: NewsDataSource"
             data-template="news-template"
              class="allBuildingsList"
              data-pull-to-refresh="true"
+            data-reload="true"
+            data-messages='{ "pullTemplate": "Pull to refresh!","refreshTemplate": "Refreshing!"}'
             >
         </ul>
     </div>
