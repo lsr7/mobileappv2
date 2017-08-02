@@ -1,0 +1,25 @@
+  <div data-role="view" >
+  
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span style="margin-left:10px">Unable to Connect</span>
+
+
+        </div>
+    </header>
+
+
+        <h1>Your Device has no internet connection.</h1>
+
+
+
+<script>
+
+document.addEventListener("online", onOnline, false);
+
+function onOnline() {
+  app.mobileApp.navigate('#components/homeView/view.html'); 
+}
+
+</script>

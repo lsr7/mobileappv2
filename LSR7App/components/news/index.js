@@ -37,11 +37,7 @@
             });
  
             that.set("NewsDataSource", dataSource);
-  dataSource.online(navigator.onLine);
-$(window).on("offline", function() {
-   dataSource.online(false);
-   alert('Unable to Connect');
-});
+
 
              $("#news-template").kendoMobileListView({
     dataSource: dataSource,

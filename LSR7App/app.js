@@ -23,6 +23,8 @@
             });
 
             kendo.bind($('.navigation-link-text'), app.navigation.viewModel);
+        
+        
         });
     };
 
@@ -46,6 +48,7 @@
                 StatusBar.backgroundColorByHexString('#000000');
                 StatusBar.styleLightContent();
             }
+
 
             var element = document.getElementById('appDrawer');
             if (typeof(element) != 'undefined' && element !== null) {
@@ -216,6 +219,13 @@ app.openLink = function(url) {
 //function onDeviceReady() {
 //    window.open = cordova.InAppBrowser.open;
 //}
+
+document.addEventListener("offline", onOffline, false);
+
+function onOffline() {
+
+                app.mobileApp.navigate('#components/offline/view.html');
+}
 
 
 // END_CUSTOM_CODE_kendoUiMobileApp
