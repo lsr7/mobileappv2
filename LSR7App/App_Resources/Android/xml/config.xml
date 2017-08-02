@@ -42,7 +42,9 @@
     <allow-navigation href="*://*.lsr7.org/*" />
     <access origin="*://*.lsr7.org" />
     <access origin="*://*.cloudflare.com" />
+    <access origin="*://*.cloudfront.net" />
     <access origin="*://*.googleapis.com" />
+    
 
     <preference name="loglevel" value="DEBUG" />
     <!--
