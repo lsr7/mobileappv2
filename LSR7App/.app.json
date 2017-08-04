@@ -186,28 +186,28 @@
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/elementary_schools.json",
+      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/elementary_schools.json",
       "title": "Elementary Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider1",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/middle_schools.json",
+      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/middle_schools.json",
       "title": "Middle Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider2",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/high_schools.json",
+      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/high_schools.json",
       "title": "High Schools"
     },
     {
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider3",
       "source": "json",
-      "url": "https://www1.lsr7.org/mobile_app/Other_schools.json",
+      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/Other_schools.json",
       "title": "Other Buildings"
     }
   ],

@@ -2,7 +2,7 @@
 
 (function() {
     app.data.jsonDataProvider2 = {
-        url: 'https://www1.lsr7.org/mobile_app/high_schools.json'
+        url: 'https://d2oqpg9vq3df92.cloudfront.net/mobile/high_schools.json'
     }
 }());
 

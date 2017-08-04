@@ -2,7 +2,7 @@
 
 (function() {
     app.data.jsonDataProvider = {
-        url: 'https://www1.lsr7.org/mobile_app/elementary_schools.json'
+        url: 'https://d2oqpg9vq3df92.cloudfront.net/mobile/elementary_schools.json'
     }
 }());
 
