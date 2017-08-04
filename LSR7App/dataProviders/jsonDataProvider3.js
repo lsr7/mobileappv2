@@ -2,7 +2,7 @@
 
 (function() {
     app.data.jsonDataProvider3 = {
-        url: 'https://d2oqpg9vq3df92.cloudfront.net/mobile/Other_schools.json'
+        url: 'https://d2oqpg9vq3df92.cloudfront.net/mobile/other_schools.json'
     }
 }());
 

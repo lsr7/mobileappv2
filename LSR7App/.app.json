@@ -207,7 +207,7 @@
       "type": "kendo-ui-mobile:dataProvider",
       "name": "jsonDataProvider3",
       "source": "json",
-      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/Other_schools.json",
+      "url": "https://d2oqpg9vq3df92.cloudfront.net/mobile/other_schools.json",
       "title": "Other Buildings"
     }
   ],
