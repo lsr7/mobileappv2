@@ -183,5 +183,7 @@
     <!-- Opt out of "Slide Over and Split View" -->
     <key>UIRequiresFullScreen</key>
     <true/>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
 </dict>
 </plist>
