@@ -6,7 +6,7 @@
   "DisplayName": "LSR7",
   "Author": "",
   "Description": "LSR7App",
-  "BundleVersion": "1.0",
+  "BundleVersion": "1.1",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1"
@@ -53,7 +53,6 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.feedback@2.0.4",
     "com.telerik.plugin.telerikanalytics@3.4.1",
     "cordova-plugin-file",
     "cordova-plugin-inappbrowser",
