@@ -14,7 +14,7 @@
 
             //When you build for Apache Cordova 3.0.0, apply this code instead of using relative URLs. In Apache Cordova 3.0.0, relative URLs might not work properly.
             //jsonUrlToLoad = app.makeUrlAbsolute("data/News.json");
-            jsonUrlToLoad = "https://www1.lsr7.org/mobile_app/news.json";
+            jsonUrlToLoad = "https://d2oqpg9vq3df92.cloudfront.net/mobile/news.json";
 
             dataSource = new kendo.data.DataSource({
                 transport: {
