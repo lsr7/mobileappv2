@@ -6,8 +6,8 @@
   "DisplayName": "LSR7",
   "Author": "",
   "Description": "LSR7App",
-  "BundleVersion": "1.12",
-  "AndroidVersionCode": "2",
+  "BundleVersion": "1.13",
+  "AndroidVersionCode": "3",
   "iOSDeviceFamily": [
     "1"
   ],
