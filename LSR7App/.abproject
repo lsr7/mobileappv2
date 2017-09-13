@@ -53,7 +53,6 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.plugin.telerikanalytics@3.4.1",
     "cordova-plugin-file",
     "cordova-plugin-inappbrowser",
     "cordova-plugin-network-information",
