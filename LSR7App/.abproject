@@ -53,12 +53,12 @@
     }
   },
   "CorePlugins": [
-    "com.telerik.plugins.wkwebview@0.6.10",
     "cordova-plugin-file",
     "cordova-plugin-inappbrowser",
     "cordova-plugin-network-information",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "cordova-plugin-whitelist"
+    "cordova-plugin-whitelist",
+    "cordova-plugin-wkwebview-engine@1.1.1"
   ]
 }
