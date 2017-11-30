@@ -57,8 +57,7 @@
     "cordova-plugin-inappbrowser",
     "cordova-plugin-network-information",
     "cordova-plugin-splashscreen",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-whitelist",
-    "cordova-plugin-wkwebview-engine@1.1.1"
-  ]
+    "cordova-plugin-whitelist"
+  ],
+  "iOSDeploymentTarget": "10.0"
 }
