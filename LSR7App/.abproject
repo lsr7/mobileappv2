@@ -57,6 +57,7 @@
     "cordova-plugin-inappbrowser",
     "cordova-plugin-network-information",
     "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
     "cordova-plugin-whitelist"
   ],
   "iOSDeploymentTarget": "6.0"
